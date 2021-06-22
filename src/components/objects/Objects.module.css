@@ -1,0 +1,42 @@
+
+.objectsWrap{
+    position: relative;
+}
+.titleWrap{
+    margin-bottom: 53px;
+}
+.titleShade{
+    text-shadow: -37px -16px 7px rgba(150, 150, 150, 0.5);
+    left: 0;
+    right: 0;
+}
+.slidercontainer{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.objSlider{
+    position: initial;
+}
+.sliderItemWrap{
+    margin: 0 15px;
+}
+.sliderItemWrap img{
+    width: 100%;
+}
+.caption{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 80%;
+    color: #fff;
+    text-align: center;
+}
+.sliderBtn{
+    margin: 0 auto;
+    width: 148px;
+    font: normal normal bold 12px/15px Montserrat;
+    height: 38px;
+    line-height: 38px;
+}

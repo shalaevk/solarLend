@@ -1,0 +1,72 @@
+.choose{
+    /*background: red;*/
+}
+.titleWrap{
+    position: relative;
+    padding-top: 180px;
+}
+.title:after{
+    position: absolute;
+    content: '';
+    background-image: url(../../images/orangeDecor.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: -40px;
+    top: -110px;
+    display: block;
+    width: 140px;
+    height: 130px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.itemWrap{
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.item{
+    width: 41%;
+    margin: 0 15px;
+}
+.num{
+    text-align: left;
+    font: normal normal 900 76px/98px Futura PT;
+    letter-spacing: 0px;
+    color: transparent;
+    -webkit-text-stroke: 1px #5EB752;
+}
+.infotitle{
+    font: normal normal bold 22px/34px Futura PT;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.info{
+    margin-top: 25px;
+}
+.imageWrap{
+    text-align: center;
+    margin-top: 50px;
+}
+.iconswrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.iconItem{
+text-align: center;
+    max-width: 23%;
+}
+.iconswrap p{
+    text-align: center;
+    font: normal normal normal 21px/28px Montserrat;
+    letter-spacing: 0px;
+    color: #474747;
+    max-width: 82%;
+    margin: 0 auto;
+    margin-top: 30px;
+}

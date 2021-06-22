@@ -1,0 +1,35 @@
+.carouselWrap{
+    position: relative;
+}
+
+.caption{
+    max-width: 673px;
+    top: 20%;
+}
+.decor{
+    display: flex;
+    align-items: baseline;
+}
+.decortext{
+    font: normal normal normal 25px/80px Futura PT;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.text{
+     text-align: left;
+     font: normal normal 900 60px/70px Montserrat;
+     letter-spacing: 0px;
+     color: #FFFFFF;
+     margin-bottom: 40px;
+ }
+
+.index{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    bottom: 30px;
+    left: 160px;
+}
