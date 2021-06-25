@@ -9,7 +9,7 @@ import logo from '../images/logo.svg'
 import decor from '../images/decorFooter.png'
 import faceBook from '../images/facebookblack.svg'
 import youTube from '../images/youtube.svg'
-import insta from '../images/Instagram.svg'
+import insta from '../images/instagram.svg'
 
 
 
