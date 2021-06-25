@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
+    overflow-x: auto;
 }
 .imgwrap img{
     width: 100%;
@@ -37,4 +38,28 @@
 .popCenter{
     margin: 0 auto;
     margin-top: 30px;
+}
+@media (max-width: 1044px) {
+    .imgwrap{
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 685px) {
+    .bottomTextOne{
+        font: normal normal normal 18px/27px Montserrat;
+    }
+    .bottomTextTwo{
+        font: normal normal bold 18px/27px Montserrat;
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .imgwrap{
+        overflow: hidden;
+        padding: 0 15px;
+    }
+    .imgwrap img:nth-child(2),
+    .imgwrap img:nth-child(3){
+        display: none;
+    }
 }

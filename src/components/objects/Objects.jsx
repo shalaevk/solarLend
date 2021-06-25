@@ -7,14 +7,27 @@ import 'react-multi-carousel/lib/styles.css'
 import * as cl  from './Objects.module.css'
 import classNames from 'classnames'
 
-import mainImg from "../../images/first-slide.png"
-import decor from "../../images/slider-decor.svg"
-import obj1 from '../../images/obj1.png'
-import obj2 from '../../images/obj2.png'
-import obj3 from '../../images/obj3.png'
-import obj4 from '../../images/obj1.png'
 
-export const Objects = () => {
+
+export const Objects = (props) => {
+
+    let callAllFunctions = (content) => {
+        props.showModal()
+        props.setModalData(content)
+    }
+
+
+    const obj = props.objects.edges.map((item, index) => {
+        // console.log(item.node)
+        return   <div className={cl.sliderItemWrap} key={index}>
+            <img src={item.node.featuredImage.node.sourceUrl}/>
+            <div className={cl.caption}>
+                <p>{item.node.title}</p>
+                <div onClick={ () => { callAllFunctions(item.node) } } className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
+            </div>
+        </div>
+    })
+
 
     return(
         <section className={cl.objectsWrap}>
@@ -54,7 +67,7 @@ export const Objects = () => {
                     },
                     mobile: {
                         breakpoint: {
-                            max: 464,
+                            max: 770,
                             min: 0
                         },
                         items: 1,
@@ -63,7 +76,7 @@ export const Objects = () => {
                     tablet: {
                         breakpoint: {
                             max: 1024,
-                            min: 464
+                            min: 770
                         },
                         items: 2,
                         partialVisibilityGutter: 30
@@ -74,35 +87,8 @@ export const Objects = () => {
                 slidesToSlide={1}
                 swipeable
             >
-                <div className={cl.sliderItemWrap}>
-                   <img src={obj1}/>
-                   <div className={cl.caption}>
-                       <p>СОНЯЧНА СТАНЦІЯ ПІД ЗЕЛЕНИЙ ТАРИФ 30 КВТ В С. РОСЛАВИЧІ, КИЇВСЬКА ОБЛАСТЬ</p>
-                       <div className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
-                   </div>
 
-               </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj2}/>
-                    <div className={cl.caption}>
-                        <p>СОНЯЧНА СТАНЦІЯ ПІД ЗЕЛЕНИЙ ТАРИФ 30 КВТ В С. РОСЛАВИЧІ, КИЇВСЬКА ОБЛАСТЬ</p>
-                        <div className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
-                    </div>
-                </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj3}/>
-                    <div className={cl.caption}>
-                        <p>СОНЯЧНА СТАНЦІЯ ПІД ЗЕЛЕНИЙ ТАРИФ 30 КВТ В С. РОСЛАВИЧІ, КИЇВСЬКА ОБЛАСТЬ</p>
-                        <div className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
-                    </div>
-                </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj4}/>
-                    <div className={cl.caption}>
-                        <p>СОНЯЧНА СТАНЦІЯ ПІД ЗЕЛЕНИЙ ТАРИФ 30 КВТ В С. РОСЛАВИЧІ, КИЇВСЬКА ОБЛАСТЬ</p>
-                        <div onClick={} className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
-                    </div>
-                </div>
+                {obj}
 
 
             </Carousel>

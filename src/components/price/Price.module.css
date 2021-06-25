@@ -68,3 +68,41 @@
 .text{
     margin-top: 32px;
 }
+.mobPrice{
+    display: none;
+}
+.mobPrice{
+    position: relative;
+}
+.objSlider{
+    position: initial;
+}
+@media (max-width: 1200px) {
+    .priceWrap{
+        flex-wrap: wrap;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .priceItem{
+        width: 40%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 830px) {
+    .priceItem{
+        width: 50%;
+    }
+}
+@media (max-width: 674px) {
+    .priceWrap{
+        display: none;
+    }
+    .mobPrice{
+        display: block;
+    }
+    .priceItem{
+        width: 100%;
+        max-width: 100%;
+    }
+}

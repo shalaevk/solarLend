@@ -22,7 +22,9 @@
 }
 .sliderItemWrap img{
     width: 100%;
+    position: relative;
 }
+
 .caption{
     position: absolute;
     bottom: 30px;
@@ -32,11 +34,16 @@
     max-width: 80%;
     color: #fff;
     text-align: center;
+    z-index: 2;
 }
+
 .sliderBtn{
     margin: 0 auto;
     width: 148px;
     font: normal normal bold 12px/15px Montserrat;
     height: 38px;
     line-height: 38px;
+}
+.sliderBtn:hover{
+opacity: 0.7;
 }

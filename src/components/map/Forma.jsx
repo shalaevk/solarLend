@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import classNames from "classnames";
-import * as cl  from './Forma.module.css'
+import * as cl from './Forma.module.css'
 
 
 import location from '../../images/Location.svg'
 import kiyvstar from '../../images/kiyvstar.svg'
 import vodaphone from '../../images/Vodafone-Logo 1.svg'
-import life  from '../../images/life.svg'
-import mail  from '../../images/Message.svg'
+import life from '../../images/life.svg'
+import mail from '../../images/Message.svg'
 
 
 const ContactForm = () => {
@@ -34,7 +34,7 @@ const ContactForm = () => {
             },
         }).then(response => {
             setToken(response.data.token)
-        }).catch(error => console.error( 'Error', error ))
+        }).catch(error => console.error('Error', error))
     }, [])
 
     const [classActive, setClass] = useState('')
@@ -60,10 +60,10 @@ const ContactForm = () => {
             message: '',
         },
         onSubmit: ({
-                       fullname,
-                       email,
-                       message
-                   }, { setSubmitting, resetForm }) => {
+            fullname,
+            email,
+            message
+        }, { setSubmitting, resetForm }) => {
             setSubmitting(true)
             // here we created a FormData field for each form field
             const bodyFormData = new FormData();
@@ -107,7 +107,7 @@ const ContactForm = () => {
     }, [isSuccessMessage, messageSent])
 
     return (
-        <div className={cl.addressWrap}>
+        <div id="conatctForm" className={cl.addressWrap}>
             <div className={cl.addressTop}>
                 <div className={cl.addrTitle}>
                     Залишити заявку
@@ -115,64 +115,64 @@ const ContactForm = () => {
 
 
                 <form onSubmit={handleSubmit}>
-            <fieldset>
-                <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                    <label className={classActive} htmlFor="fullname">Ім’я*</label>
-                    <input onClick={setClassActive}
-                        id="fullname"
-                        name="fullname"
-                        type="text"
-                        onChange={handleChange}
-                        value={values.fullname}
-                        required
-                    />
-                </div>
-                <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                    <label className={classActive} htmlFor="phone">Номер телефону*</label>
-                    <input
-                        id="phone"
-                        name="phone"
-                        type="phone"
-                        onChange={handleChange}
-                        value={values.number}
-                        required
-                    />
-                </div>
-                <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                    <label className={classActive} className='active' htmlFor="email">E-mail*</label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        onChange={handleChange}
-                        value={values.email}
-                        required
-                    />
-                </div>
+                    <fieldset>
+                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
+                            <label className={classActive} htmlFor="fullname">Ім’я*</label>
+                            <input onClick={setClassActive}
+                                id="fullname"
+                                name="fullname"
+                                type="text"
+                                onChange={handleChange}
+                                value={values.fullname}
+                                required
+                            />
+                        </div>
+                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
+                            <label className={classActive} htmlFor="phone">Номер телефону*</label>
+                            <input
+                                id="phone"
+                                name="phone"
+                                type="phone"
+                                onChange={handleChange}
+                                value={values.number}
+                                required
+                            />
+                        </div>
+                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
+                            <label className={classActive} className='active' htmlFor="email">E-mail*</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                onChange={handleChange}
+                                value={values.email}
+                                required
+                            />
+                        </div>
 
-            </fieldset>
-            <div>
-                <button className={classNames('pop', cl.formBtn)}
-                    type="submit"
-                    value="Send Message"
-                    disabled={isSubmitting}
-                >замовити</button>
-            </div>
-            {messageSent && isSuccessMessage && (
-                <div>Message sent successfully!</div>
-            )}
-            {messageSent && !isSuccessMessage && (
-                <div>something went wrong please try again.</div>
-            )}
-        </form>
+                    </fieldset>
+                    <div>
+                        <button className={classNames('pop', cl.formBtn)}
+                            type="submit"
+                            value="Send Message"
+                            disabled={isSubmitting}
+                        >замовити</button>
+                    </div>
+                    {messageSent && isSuccessMessage && (
+                        <div>Message sent successfully!</div>
+                    )}
+                    {messageSent && !isSuccessMessage && (
+                        <div>something went wrong please try again.</div>
+                    )}
+                </form>
 
             </div>
             <div className={cl.addressBottom}>
-                <p className={cl.addr}><img src={location} alt=""/> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
-                <p className={cl.phone}><img src={kiyvstar} alt=""/><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
-                <p className={cl.phone}><img src={vodaphone} alt=""/><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
-                <p className={cl.phone}><img src={life} alt=""/><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
-                <p className={cl.mail}><img src={mail} alt=""/><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
+                <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
+                <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
+                <p className={cl.phone}><img src={vodaphone} alt="" /><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
+                <p className={cl.phone}><img src={life} alt="" /><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
+                <p className={cl.mail}><img src={mail} alt="" /><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
                 <p className={cl.schedule}>пн. - пт. 9:00 до 18:00</p>
             </div>
         </div>

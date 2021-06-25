@@ -9,7 +9,7 @@ const languages = [
     {
         path: "/ru",
         code: "ru",
-        language: "ru"
+        language: "ru_Ru"
 
     },
 ]
@@ -21,8 +21,8 @@ exports.createPages = async ({ actions: { createPage } }) => {
             path: lang.path,
             component: HomepageTemplate,
             context: {
-                lang: lang.code,
-                language: lang.language
+                lang: lang.language,
+                language:  lang.code
             },
         })
     })

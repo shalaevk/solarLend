@@ -1,0 +1,79 @@
+.footer{
+   padding-top: 150px;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+.footerMiddle{
+   margin-top: 60px;
+   display: flex;
+   justify-content: space-between;
+}
+.footerMiddleLeft{
+   column-count: 2;
+}
+.footerMiddleLeft a{
+   font: normal normal normal 16px/39px Montserrat;
+   letter-spacing: 0px;
+   color: #000000;
+   text-decoration: underline;
+}
+.footerMiddleLeft a:hover{
+   text-decoration: none;
+}
+.footerMiddleRight{
+   min-width: 60%;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+.footerText{
+   font: normal normal normal 26px/32px Montserrat;
+   letter-spacing: 0px;
+   color: #000000;
+   max-width: 300px;
+   margin-left: 30px;
+}
+.decorLine{
+   width: 30px;
+   height: 1px;
+   background-color: #000000;
+   opacity: 0.2;
+   margin-right: 30px;
+}
+.social a{
+   margin: 0 7.5px;
+}
+.social a:hover{
+   opacity: 0.5;
+}
+.footerCopy{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 90px;
+}
+.copyLeft{
+   display: flex;
+}
+.copyLeft span{
+   margin-right: 10px;
+   font: normal normal normal 13px/16px Montserrat;
+   letter-spacing: 0px;
+   color: #000000;
+   text-decoration: underline;
+}
+.copyLeft a{
+   font: normal normal normal 13px/16px Montserrat;
+   letter-spacing: 0px;
+   color: #000000;
+}
+.copyRight{
+   display: flex;
+}
+.copyRight p{
+   margin: 0 10px;
+}
+.copyRight p:first-child{
+   border-right: 1px solid lightgray;
+   padding-right: 10px;
+   margin-right: 0;
+}

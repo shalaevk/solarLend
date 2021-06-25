@@ -7,22 +7,36 @@ import * as cl  from './Reviews.module.css'
 
 import classNames from 'classnames'
 
-import mainImg from "../../images/first-slide.png"
 import playBtn from "../../images/playBtn.svg"
-import obj1 from '../../images/obj1.png'
-import obj2 from '../../images/obj2.png'
-import obj3 from '../../images/obj3.png'
-import obj4 from '../../images/obj1.png'
 
-export const Reviews = () => {
+
+export const Reviews = ({rev, setLink, showModal}) => {
+
+    let callAllFunctions = (link) => {
+        showModal()
+        setLink(link)
+    }
+
+    let revArray = rev.rewblock.rewslide.map((slide) => {
+        return <div className={cl.sliderItemWrap}>
+            <img src={slide.rewimgone.sourceUrl}/>
+            <div className={cl.caption}>
+                <div className={cl.reviewIcon} onClick={ () => { callAllFunctions(slide.rewvideo) } }>
+                    <img src={playBtn} alt=""/>
+                </div>
+                <p>{slide.rewtitleone}</p>
+            </div>
+
+        </div>
+    });
 
     return(
         <section className={classNames('container', cl.revieWrap)}>
             <div className={classNames('titleWrap', cl.titleWrap)}>
                 <div className={classNames('title')}>
-                    Відгуки наших клієнтів
+                    {rev.rewtitle}
                     <div className={classNames('titleShade', cl.titleShade)}>
-                        Відгуки наших клієнтів
+                        {rev.rewtitle}
                     </div>
                 </div>
             </div>
@@ -74,48 +88,7 @@ export const Reviews = () => {
                 slidesToSlide={1}
                 swipeable
             >
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj1}/>
-                    <div className={cl.caption}>
-                        <div className={cl.reviewIcon}>
-                            <img src={playBtn} alt=""/>
-                        </div>
-                        <p>СОНЯЧНА ЕЛЕКТРОСТАНЦІЯ 15 КВТ НА АЗС ОККО В М. МУКАЧЕВО, ЗАКАРПАТСЬКА ОБЛАСТЬ</p>
-                    </div>
-
-                </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj1}/>
-                    <div className={cl.caption}>
-                        <div className={cl.reviewIcon}>
-                            <img src={playBtn} alt=""/>
-                        </div>
-                        <p>СОНЯЧНА ЕЛЕКТРОСТАНЦІЯ 15 КВТ НА АЗС ОККО В М. МУКАЧЕВО, ЗАКАРПАТСЬКА ОБЛАСТЬ</p>
-                    </div>
-
-                </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj1}/>
-                    <div className={cl.caption}>
-                        <div className={cl.reviewIcon}>
-                            <img src={playBtn} alt=""/>
-                        </div>
-                        <p>СОНЯЧНА ЕЛЕКТРОСТАНЦІЯ 15 КВТ НА АЗС ОККО В М. МУКАЧЕВО, ЗАКАРПАТСЬКА ОБЛАСТЬ</p>
-                    </div>
-
-                </div>
-                <div className={cl.sliderItemWrap}>
-                    <img src={obj1}/>
-                    <div className={cl.caption}>
-                        <div className={cl.reviewIcon}>
-                            <img src={playBtn} alt=""/>
-                        </div>
-                        <p>СОНЯЧНА ЕЛЕКТРОСТАНЦІЯ 15 КВТ НА АЗС ОККО В М. МУКАЧЕВО, ЗАКАРПАТСЬКА ОБЛАСТЬ</p>
-                    </div>
-
-                </div>
-
-
+                {revArray}
 
             </Carousel>
         </section>

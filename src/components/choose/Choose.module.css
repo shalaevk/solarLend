@@ -1,5 +1,6 @@
 .choose{
     /*background: red;*/
+    overflow: hidden;
 }
 .titleWrap{
     position: relative;
@@ -69,4 +70,75 @@ text-align: center;
     max-width: 82%;
     margin: 0 auto;
     margin-top: 30px;
+}
+
+@media (max-width: 980px){
+    .iconswrap{
+        flex-wrap: wrap;
+    }
+    .iconItem{
+        max-width: 50%;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 685px){
+.itemWrap{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+    .item{
+        width: 90%;
+
+    }
+    .num{
+        text-align: center;
+    }
+    .titleWrap{
+        padding-top: 110px;
+    }
+    .title:after{
+        display: none;
+    }
+    .titleWrap{
+        background-image: url(../../images/orangeDecor.png);
+        background-size: 130px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position-x: 109%;
+        background-position-y: 40px;
+    }
+}
+
+@media (max-width: 555px) {
+    .titleWrap{
+        /*max-width: 70%;*/
+        /*margin: 0 auto;*/
+    }
+}
+
+
+@media (max-width: 484px){
+
+    .iconItem{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+}
+@media (max-width: 395px){
+    .titleWrap{
+        background-position-x: 119%;
+    }
+}
+@media (max-width: 349px){
+    .titleWrap{
+        background-position-x: 123%;
+    }
+}
+@media (max-width: 349px){
+    .titleWrap{
+        background-size: 120px;
+    }
 }

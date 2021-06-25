@@ -3,7 +3,7 @@
 }
 
 .caption{
-    max-width: 673px;
+    max-width: 50%;
     top: 20%;
 }
 .decor{
@@ -30,6 +30,40 @@
     color: #fff;
     font-size: 40px;
     position: absolute;
-    bottom: 30px;
-    left: 160px;
+    bottom: 4%;
+    left: 11%;
+}
+@media (max-width: 1434px){
+    .text{
+        font-size: 4.3vw;
+        line-height: 4.3vw;
+    }
+
+
+}
+@media (max-width: 685px){
+    .decortext{
+        font: normal normal normal 25px/80px Futura PT;
+    }
+    .text{
+        font: normal normal 900 37px/40px Montserrat;
+    }
+    .caption{
+        max-width: 100%;
+    }
+    .mobBtn{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    .index{
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 70px;
+    }
+}
+
+@media (max-width: 685px){
+
 }

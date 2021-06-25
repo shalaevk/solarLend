@@ -9,16 +9,16 @@ import third from '../../images/thirdIcon.svg'
 import fourth from '../../images/fourthIcon.svg'
 
 
-export const Choose = () => {
+export const Choose = (props) => {
 
 
     return (
             <section className={classNames(cl.choose, '')}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title', cl.title)} >
-                        Чому обирають Solarland
+                        {props.ch.choosetitle}
                         <div className='titleShade'>
-                         Чому обирають Solarland
+                            {props.ch.choosetitle}
                         </div>
                     </div>
                 </div>
@@ -28,11 +28,10 @@ export const Choose = () => {
                                 01
                             </div>
                             <div className={cl.infotitle}>
-                                Ми гарантуємо заявлену генерацію
+                                {props.ch.chooseblocks.choosetitleone}
                             </div>
                             <div className={cl.info}>
-                                Грамотне проектування, якісний монтаж та використання тільки найкращого
-                                обладнання дозволяє гарантувати генерацію, яку ми заявляємо в комерційній пропозиції.
+                                {props.ch.chooseblocks.choosetextone}
                             </div>
                         </div>
                         <div className={cl.item}>
@@ -40,16 +39,10 @@ export const Choose = () => {
                                 02
                             </div>
                             <div className={cl.infotitle}>
-                                Проводимо моніторинг роботи електростанцій
+                                {props.ch.chooseblocks.choosetitletwo}
                             </div>
                             <div className={cl.info}>
-                                Наш диспетчер стежить за показниками встановлених нами станцій,
-                                та в разі виявлення проблем,
-                                передає інформацію для подальшого їх вирішення.
-                                Це дозволяє нашим клієнтам не витрачати особистий
-                                час на пошук можливих причин зниження продуктивності,
-                                та бути впевненими у вигідному
-                                капіталовкладенні, яке стабільно приносить пасивний дохід.
+                                {props.ch.chooseblocks.choosetexttwo}
                             </div>
                         </div>
                         <div className={cl.item}>
@@ -57,35 +50,33 @@ export const Choose = () => {
                                 03
                             </div>
                             <div className={cl.infotitle}>
-                                Маємо підмінний фонд обладнання
+                                {props.ch.chooseblocks.choosetitlethree}
                             </div>
                             <div className={cl.info}>
-                                У разі виявлення несправностей, компанія гарантує заміну всіх елементів і вузлів електростанції,
-                                задля відновлення повної працездатності об’єкта, та підтримки
-                                його безперебійної роботи (на час діагностики поломки і до повного її усунення).
+                                {props.ch.chooseblocks.choosetextthree}
                             </div>
                         </div>
 
                 </div>
                 <div className={cl.imageWrap}>
-                    <img src={solar} alt=""/>
+                    <img className="img-fluid" src={props.ch.chooseimage.sourceUrl} alt=""/>
                 </div>
                 <div className={cl.iconswrap}>
                     <div className={cl.iconItem}>
                         <img src={firstim} alt=""/>
-                        <p>Професійний штат співробітників</p>
+                        <p>{props.ch.chooseicons.chooseicontextone}</p>
                     </div>
                     <div className={cl.iconItem}>
                         <img src={secIm} alt=""/>
-                        <p>7 років досвіду будівництва СЕС</p>
+                        <p>{props.ch.chooseicons.chooseicontexttwo}</p>
                     </div>
                     <div className={cl.iconItem}>
                         <img src={third} alt=""/>
-                        <p>Власний автомобільний парк</p>
+                        <p>{props.ch.chooseicons.chooseicontextthree}</p>
                     </div>
                     <div className={cl.iconItem}>
                         <img src={fourth} alt=""/>
-                        <p>Повний документальний супровід усіх угод</p>
+                        <p>{props.ch.chooseicons.chooseicontextfour}</p>
                     </div>
                 </div>
             </section>

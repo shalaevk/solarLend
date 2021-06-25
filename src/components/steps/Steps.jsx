@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import * as cl  from './Steps.module.css'
 import classNames from 'classnames'
 
@@ -8,69 +10,153 @@ import step3 from '../../images/step-3.svg'
 
 
 
-export const Steps = () => {
+export const Steps = ({st}) => {
 
     return (
-        <section>
+        <section className={cl.stepsWrap}>
             <div className='titleWrap'>
                 <div className={classNames('title')}>
-                    Етапи робіт
+                    {st.steptitle}
                     <div className={classNames('titleShade', cl.titleShade)}>
-                        Етапи робіт
+                        {st.steptitle}
                     </div>
                 </div>
             </div>
             <div className={cl.steps}>
+
                 <div className={cl.stepItem}>
                     <div className={cl.stepnum}>
                         01
                     </div>
                     <div className={cl.steptitle}>
-                        Виїзд на об’єкт
+                        {st.stepblock.steptitleone}
                     </div>
                     <div className={cl.icon}>
-                        <img src={step1} alt=""/>
+                        <img className="img-fluid" src={step1} alt=""/>
                     </div>
-                    <div className={cl.list}>
-                        Аналізуємо особливості конструкції будівлі та (або) ділянки
-                        Робимо необхідні заміри даху та (або) ділянки, а також за допомогою дрону
-                        Фото та відеофіксація об’єкту за допомогою дрону (3D моделювання)
-                    </div>
+                    <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextone }}/>
+
                 </div>
                 <div className={cl.stepItem}>
                     <div className={cl.stepnum}>
                         02
                     </div>
                     <div className={cl.steptitle}>
-                        Проектні роботи
+                        {st.stepblock.steptitletwo}
                     </div>
                     <div className={cl.icon}>
-                        <img src={step2} alt=""/>
+                        <img className="img-fluid" src={step2} alt=""/>
                     </div>
-                    <div className={cl.list}>
-                        Розробка та узгодження рішень для Вашого об’єкту (3D модель)
-                        Підбір обладнання (з урахуванням особливостей данного об’єкту)
-                        Підготовка комерційної пропозиції та техніко-економічного обґрунтування
-                        Створення повного пакету технічної документації
-                    </div>
+                    <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }}/>
+
+
                 </div>
                 <div className={cl.stepItem}>
                     <div className={cl.stepnum}>
                         03
                     </div>
                     <div className={cl.steptitle}>
-                        Монтаж станції та оформлення «Зеленого» тарифу
+                        {st.stepblock.steptitlethree}
                     </div>
                     <div className={cl.icon}>
-                        <img src={step3} alt=""/>
+                        <img className="img-fluid" src={step3} alt=""/>
                     </div>
-                    <div className={cl.list}>
-                        Доставляємо обладнання на об’єкт
-                        Інсталюємо та проводимо пуско-налагоджувальні роботи
-                        Подаємо пакет документів для ЗТ Постачальнику електроенергії
-                        Супроводжуємо процедуру встановлення лічильника та оформлення договору з постачальником електроенергії
-                    </div>
+                    <div className={cl.list}  dangerouslySetInnerHTML={{ __html: st.stepblock.steptextthree }}/>
+
                 </div>
+            </div>
+            <div className={classNames(cl.mobsteps, "mobsteps")}>
+                <Carousel
+                    additionalTransfrom={0}
+                    arrows={true}
+                    autoPlaySpeed={3000}
+                    centerMode={false}
+                    className={cl.objSlider}
+                    containerClass="slidercontainer"
+                    dotListClass=""
+                    draggable
+                    focusOnSelect={false}
+                    infinite
+                    itemClass=""
+                    keyBoardControl
+                    minimumTouchDrag={80}
+                    renderButtonGroupOutside={false}
+                    renderDotsOutside={false}
+                    responsive={{
+                        desktop: {
+                            breakpoint: {
+                                max: 3000,
+                                min: 1024
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 40
+                        },
+                        mobile: {
+                            breakpoint: {
+                                max: 771,
+                                min: 0
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
+                        },
+                        tablet: {
+                            breakpoint: {
+                                max: 1024,
+                                min: 464
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
+                        }
+                    }}
+                    showDots={true}
+                    sliderClass="sliderClass"
+                    slidesToSlide={1}
+                    swipeable
+                >
+
+                    <div className={cl.stepItem}>
+                        <div className={cl.stepnum}>
+                            01
+                        </div>
+                        <div className={cl.steptitle}>
+                            {st.stepblock.steptitleone}
+                        </div>
+                        <div className={cl.icon}>
+                            <img className="img-fluid" src={step1} alt=""/>
+                        </div>
+                        <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextone }}/>
+
+                    </div>
+                    <div className={cl.stepItem}>
+                        <div className={cl.stepnum}>
+                            02
+                        </div>
+                        <div className={cl.steptitle}>
+                            {st.stepblock.steptitletwo}
+                        </div>
+                        <div className={cl.icon}>
+                            <img className="img-fluid" src={step2} alt=""/>
+                        </div>
+                        <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }}/>
+
+
+                    </div>
+                    <div className={cl.stepItem}>
+                        <div className={cl.stepnum}>
+                            03
+                        </div>
+                        <div className={cl.steptitle}>
+                            {st.stepblock.steptitlethree}
+                        </div>
+                        <div className={classNames(cl.icon, cl.notMargin)}>
+                            <img className="img-fluid" src={step3} alt=""/>
+                        </div>
+                        <div className={cl.list}  dangerouslySetInnerHTML={{ __html: st.stepblock.steptextthree }}/>
+
+                    </div>
+
+
+                </Carousel>
             </div>
         </section>
     )
