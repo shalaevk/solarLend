@@ -1,3 +1,4 @@
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -571,12 +572,13 @@ text-align: left;
     z-index: 1;
 }
 .carousel-control-next-icon {
-    background-image: url(../images/leftarrow.svg);
-    transform: rotate(180deg);
+    background-image: url(../images/rightarrow.png);
+
 
 }
 .carousel-control-prev-icon {
-    background-image: url(../images/leftarrow.svg);
+    background-image: url(../images/rightarrow.png);
+    transform: rotate(180deg);
     width: 60px;
 }
 
@@ -605,7 +607,7 @@ text-align: left;
     mask-position: center;
     -webkit-mask-size: 40px;
     mask-size: 40px;
-    background: rgba(0,0,0,1);
+    /*background: rgba(0,0,0,1);*/
 }
 .slidercontainer .react-multiple-carousel__arrow:hover{
     background-color: #5EB752;
@@ -615,12 +617,12 @@ text-align: left;
 }
 
 .slidercontainer  .react-multiple-carousel__arrow--left{
-    -webkit-mask-image: url(../images/leftarrow.svg);
-    mask-image: url(../images/leftarrow.svg);
+    background-image: url(../images/leftarrow.svg);
+    /*mask-image: url(../images/leftarrow.svg);*/
 }
 .slidercontainer  .react-multiple-carousel__arrow--right{
-    -webkit-mask-image: url(../images/leftarrow.svg);
-    mask-image: url(../images/leftarrow.svg);
+    background-image: url(../images/leftarrow.svg);
+    /*mask-image: url(../images/leftarrow.svg);*/
     transform: rotate(180deg);
 }
 .slidercontainer  .react-multiple-carousel__arrow--left {
