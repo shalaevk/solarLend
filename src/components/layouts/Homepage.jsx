@@ -18,7 +18,8 @@ import { Footer } from '../Footer';
 
 
 const Homepage = ({ data }) => {
-    console.log(data.wpPage.ACF)
+
+    console.log(data)
 
     const [show, setState] = useState(false)
     const [objData, setObjData] = useState({
@@ -85,22 +86,22 @@ const Homepage = ({ data }) => {
     return (
 
         <PrimaryLayout
-            adress={data.wpPage.ACF.adress}
-            kiyvstar={data.wpPage.ACF.kiyvstar}
-            mail={data.wpPage.ACF.mail}
-            vodafone={data.wpPage.ACF.vodafone}
-            life={data.wpPage.ACF.life}
+            adress={data.wpPage.acf.adress}
+            kiyvstar={data.wpPage.acf.kiyvstar}
+            mail={data.wpPage.acf.mail}
+            vodafone={data.wpPage.acf.vodafone}
+            life={data.wpPage.acf.life}
             menu={data.allWpMenu}
         >
             <div className='container-fluid'>
-                <Slider slides={data.wpPage.ACF.addslide} />
-                <Efficiency eff={data.wpPage.ACF} />
-                <Choose ch={data.wpPage.ACF} />
-                <Steps st={data.wpPage.ACF} />
+                <Slider slides={data.wpPage.acf.addslide} />
+                <Efficiency eff={data.wpPage.acf} />
+                <Choose ch={data.wpPage.acf} />
+                <Steps st={data.wpPage.acf} />
                 <Objects setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
                 <Modal handleClose={hideModal} objData={objData} show={show} />
-                <Price pr={data.wpPage.ACF} />
-                <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.ACF} />
+                <Price pr={data.wpPage.acf} />
+                <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
                 <Map />
             </div>
@@ -114,7 +115,7 @@ export default Homepage;
 export const query = graphql`
 
     query($lang: String!, $language: String!) {
-        allWpMenu(filter: {language: {eq: $language}}) {
+        allWpMenu(filter: {language: {eq: $lang}}) {
             edges {
                 node {
                     slug
@@ -145,9 +146,9 @@ export const query = graphql`
                 }
             }
         }
-        wpPage(locale: {locale: {eq: $lang}}, slug: {eq: "home"}) {
+        wpPage(slug: {eq: "home"} locale: {locale: {eq: $language}}) {
             slug
-            ACF {
+            acf {
                 adress
                 kiyvstar {
                     title
