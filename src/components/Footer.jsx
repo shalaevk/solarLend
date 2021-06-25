@@ -7,8 +7,8 @@ import * as cl from './Footer.module.css'
 
 import logo from '../images/logo.svg'
 import decor from '../images/decorFooter.png'
-import faceBook from '../images/faceBook-black.svg'
-import youTube from '../images/youTube.svg'
+import faceBook from '../images/facebookblack.svg'
+import youTube from '../images/youtube.svg'
 import insta from '../images/instagram.svg'
 
 
