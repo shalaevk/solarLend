@@ -30,7 +30,6 @@ const Slider = (props) => {
     const [index, setIndex] = useState(1);
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
-        console.log(selectedIndex + 1)
     };
 
     return (

@@ -17,13 +17,13 @@ export const Objects = (props) => {
     }
 
 
-    const obj = props.objects.edges.map((item, index) => {
+    let obj = props.objects.edges.map((item, index) => {
         // console.log(item.node)
         return   <div className={cl.sliderItemWrap} key={index}>
             <img src={item.node.featuredImage.node.sourceUrl}/>
             <div className={cl.caption}>
                 <p>{item.node.title}</p>
-                <div onClick={ () => { callAllFunctions(item.node) } } className={classNames(cl.sliderBtn, 'pop')}>Детальніше</div>
+                <a href="#contactForm" onClick={ () => { callAllFunctions(item.node) } } className={classNames(cl.sliderBtn, 'pop')}>Детальніше</a>
             </div>
         </div>
     })
