@@ -12,6 +12,7 @@ import youTube from '../images/youTube.svg'
 import insta from '../images/instagram.svg'
 
 
+
 export const Footer = (props) => {
    return <footer className={cl.footer}>
       <div className={cl.logo}>
