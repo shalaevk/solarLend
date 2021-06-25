@@ -550,7 +550,7 @@ text-align: left;
 .topSlider  .carousel-control-prev,
 .topSlider  .carousel-control-next{
     opacity: 1;
-    bottom: 6%;
+    bottom: 7%;
     z-index: 10;
 }
 .topSlider .carousel-item{
@@ -571,20 +571,12 @@ text-align: left;
 .carousel-caption{
     z-index: 1;
 }
-.carousel-control-next-icon {
-    background-image: url(../images/rightarrow.png);
 
-
-}
-.carousel-control-prev-icon {
-    background-image: url(../images/rightarrow.png);
-    transform: rotate(180deg);
-    width: 60px;
-}
 
 .slidercontainer{
     max-width: 90%;
     margin: 0 auto;
+
 }
 
 .slidercontainer .react-multiple-carousel__arrow--left{
@@ -607,7 +599,7 @@ text-align: left;
     mask-position: center;
     -webkit-mask-size: 40px;
     mask-size: 40px;
-    /*background: rgba(0,0,0,1);*/
+    background: rgba(0,0,0,1);
 }
 .slidercontainer .react-multiple-carousel__arrow:hover{
     background-color: #5EB752;
@@ -618,11 +610,11 @@ text-align: left;
 
 .slidercontainer  .react-multiple-carousel__arrow--left{
     background-image: url(../images/leftarrow.svg);
-    /*mask-image: url(../images/leftarrow.svg);*/
+    mask-image: url(../images/leftarrow.svg);
 }
 .slidercontainer  .react-multiple-carousel__arrow--right{
-    background-image: url(../images/leftarrow.svg);
-    /*mask-image: url(../images/leftarrow.svg);*/
+    -webkit-mask-image: url(../images/leftarrow.svg);
+    mask-image: url(../images/leftarrow.svg);
     transform: rotate(180deg);
 }
 .slidercontainer  .react-multiple-carousel__arrow--left {

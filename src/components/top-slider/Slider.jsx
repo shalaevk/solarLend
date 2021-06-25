@@ -3,11 +3,14 @@ import Carousel from 'react-bootstrap/Carousel'
 import decor from '../../images/slider-decor.svg'
 import classNames from "classnames";
 import * as cl from './Slider.module.css';
+import right from '../../images/right.svg'
+import left from '../../images/left.svg'
 
 const Slider = (props) => {
 
     const mainSliderArray = props.slides.map((slide) => {
         return <Carousel.Item>
+
 
             <img
                 className="d-block w-100"
@@ -34,7 +37,7 @@ const Slider = (props) => {
 
     return (
         <div className={cl.carouselWrap}>
-            <Carousel className="topSlider" activeIndex={index} onSelect={handleSelect}>
+            <Carousel prevIcon={<img src={ left} />} nextIcon={<img src={ right} />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
 
                 {mainSliderArray}
 
