@@ -26,19 +26,19 @@ sliderItemWrap
 
     display: block;
 }
-.sliderItemWrap:after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #1a1a1a;
-    opacity: 0.3;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
+/*.sliderItemWrap:after{*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: #1a1a1a;*/
+/*    opacity: 0.3;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    z-index: 1;*/
 
-}
+/*}*/
 .caption{
     position: absolute;
     bottom: 30px;
