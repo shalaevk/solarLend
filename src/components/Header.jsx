@@ -56,14 +56,15 @@ export const Header = (props) => {
 
 
         <Navbar.Toggle onClick={setClass} aria-controls="basic-navbar-nav">
+
             <div className={classNames("headertopnav", cls)}>
-
-
-                <button className="headertopnavbtn">
+                <div className="headertopnavbtn">
                     Меню
-                </button>
+                </div>
             </div>
+
         </Navbar.Toggle>
+
 
 
 

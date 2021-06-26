@@ -103,7 +103,7 @@ const Homepage = ({ data }) => {
                 <Price pr={data.wpPage.acf} />
                 <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
-                {/* <Map /> */}
+                <Map />
             </div>
         </PrimaryLayout>
 

@@ -30,7 +30,7 @@ export const Footer = (props) => {
             <div className={cl.decorLine}></div>
             <div className={cl.social}>
                <a href="#"> <img src={faceBook} alt="faceBook" /> </a>
-               <a href="#"> <img src={youTube} alt="youtube" /> </a>
+               <a href="#"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
                <a href="#"> <img src={insta} alt="instagarm" /> </a>
             </div>
          </div>

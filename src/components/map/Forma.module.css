@@ -42,6 +42,10 @@
     letter-spacing: 0px;
     color: #000000;
 }
+.phonesMobWrap{
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
 .phone a{
     text-align: left;
     font: normal normal normal 26px/32px Montserrat;
@@ -80,5 +84,21 @@
     }
     .addressBottom{
         margin-top: 500px;
+    }
+}
+@media (max-width: 447px) {
+    .addressWrap{
+        width: 90%;
+    }
+ 
+    .phone a{
+        font: normal normal normal 19px/26px Montserrat;
+    }
+}
+@media (max-width: 362px) {
+    .addressTop,
+    .addressBottom{
+        padding-left: 18px;
+        padding-right: 18px;
     }
 }

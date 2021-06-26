@@ -14,9 +14,13 @@ import ContactForm from "./Forma";
 const AnyReactComponent = () => <div className={cl.pin}><img src={pin} alt="" /></div>;
 export const Map = () => {
 
+
+
+
+
     const getMapOptions = (maps) => {
         return {
-            disableDefaultUI: false,
+            disableDefaultUI: true,
             mapTypeControl: false,
             streetViewControl: false,
             styles: [
@@ -184,8 +188,16 @@ export const Map = () => {
     }
 
     const [center, setCenter] = useState({ lat: 50.4422373, lng: 30.6470394 });
+    const [marker, setMarker] = useState({ lat: 50.4423671, lng: 30.6301307 });
     const [zoom, setZoom] = useState(14);
 
+    useEffect(() => {
+        if (window.innerWidth < 768) {
+            setCenter({ lat: 50.4424081, lng: 30.6327593 })
+            setMarker("")
+        }
+
+    }, []);
 
 
     return (
@@ -197,8 +209,8 @@ export const Map = () => {
                 options={getMapOptions}
             >
                 <AnyReactComponent
-                    lat={50.4423671}
-                    lng={30.6301307}
+                    lat={marker.lat}
+                    lng={marker.lng}
                 />
             </GoogleMapReact>
 

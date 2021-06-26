@@ -169,9 +169,14 @@ const ContactForm = () => {
             </div>
             <div className={cl.addressBottom}>
                 <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
-                <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
-                <p className={cl.phone}><img src={vodaphone} alt="" /><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
-                <p className={cl.phone}><img src={life} alt="" /><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
+                <div className={cl.phonesMobWrap}>
+
+                    <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
+                    <p className={cl.phone}><img src={vodaphone} alt="" /><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
+                    <p className={cl.phone}><img src={life} alt="" /><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
+
+                </div>
+
                 <p className={cl.mail}><img src={mail} alt="" /><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
                 <p className={cl.schedule}>пн. - пт. 9:00 до 18:00</p>
             </div>
