@@ -1,5 +1,7 @@
-
-sliderItemWrap
+.objectsWrap{
+    position: relative;
+}
+.sliderItemWrap
 .titleWrap{
     margin-bottom: 53px;
 }
@@ -23,8 +25,6 @@ sliderItemWrap
 }
 .sliderItemWrap img{
     width: 100%;
-
-    display: block;
 }
 /*.sliderItemWrap:after{*/
 /*    content: '';*/
@@ -49,6 +49,9 @@ sliderItemWrap
     color: #fff;
     text-align: center;
     z-index: 2;
+}
+.caption p {
+    font: normal normal bold 18px/26px Futura PT;
 }
 
 .sliderBtn{

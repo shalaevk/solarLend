@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-
+import left from '../../images/leftCarousel.svg'
 
 
 import * as cl  from './Objects.module.css'
@@ -49,6 +49,7 @@ export const Objects = (props) => {
                 containerClass="slidercontainer"
                 dotListClass=""
                 draggable
+
                 focusOnSelect={false}
                 infinite
                 itemClass=""
@@ -60,7 +61,7 @@ export const Objects = (props) => {
                     desktop: {
                         breakpoint: {
                             max: 3000,
-                            min: 1024
+                            min: 1024,
                         },
                         items: 3,
                         partialVisibilityGutter: 40

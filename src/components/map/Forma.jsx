@@ -13,8 +13,8 @@ import mail from '../../images/Message.svg'
 
 
 const ContactForm = () => {
-    const WEBSITE_URL = 'https://kirill.s-tet.top';
-    const FORM_ID = '26'; //Form id that provides Contact Form 7
+    const WEBSITE_URL = 'https://solarland.s-tet.top';
+    const FORM_ID = '100'; //Form id that provides Contact Form 7
 
     const [token, setToken] = useState('') // store token
     const [isSuccessMessage, setIsSuccessMessage] = useState(false) // manage is success message state
@@ -26,8 +26,8 @@ const ContactForm = () => {
             method: 'post',
             url: `${WEBSITE_URL}/wp-json/jwt-auth/v1/token`,
             data: {
-                username: 'TEst', // provide a user credential with subscriber role
-                password: '7#il6fA2TGvisQLgInSiNE@l'
+                username: 'solarUser', // provide a user credential with subscriber role
+                password: 'Fg2KUZ9YOqC94QF!D$'
             },
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const ContactForm = () => {
     const [classActive, setClass] = useState('')
 
     let setClassActive = () => {
-        console.log(this)
+
         if (classActive === 'active') {
             setClass('')
         }
@@ -57,19 +57,19 @@ const ContactForm = () => {
         initialValues: {
             fullname: '',
             email: '',
-            message: '',
+            phone: '',
         },
         onSubmit: ({
             fullname,
             email,
-            message
+            phone
         }, { setSubmitting, resetForm }) => {
             setSubmitting(true)
             // here we created a FormData field for each form field
             const bodyFormData = new FormData();
             bodyFormData.set('fullname', fullname);
             bodyFormData.set('email', email);
-            bodyFormData.set('message', message);
+            bodyFormData.set('phone', phone);
 
             // here we sent
             axios({
@@ -81,7 +81,7 @@ const ContactForm = () => {
                     'Content-Type': 'multipart/form-data'
                 },
             }).then(response => {
-                console.log(response)
+                // console.log(response)
                 // actions taken when submission goes OK
                 resetForm()
                 setSubmitting(false)
