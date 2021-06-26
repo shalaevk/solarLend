@@ -33,7 +33,7 @@ const PrimaryLayout = (props) => {
             menu={menu}
         />
         {props.children}
-        <Footer menu={footerMenuArr} />
+        {/* <Footer menu={footerMenuArr} /> */}
     </>
 }
 

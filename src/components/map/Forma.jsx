@@ -7,7 +7,7 @@ import * as cl from './Forma.module.css'
 
 import location from '../../images/Location.svg'
 import kiyvstar from '../../images/kiyvstar.svg'
-import vodaphone from '../../images/Vodafone-Logo 1.svg'
+import vodaphone from '../../images/vodafonelogo.svg'
 import life from '../../images/life.svg'
 import mail from '../../images/Message.svg'
 

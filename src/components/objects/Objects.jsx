@@ -1,10 +1,10 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import left from '../../images/leftCarousel.svg'
 
 
-import * as cl  from './Objects.module.css'
+import * as cl from './Objects.module.css'
 import classNames from 'classnames'
 
 
@@ -19,17 +19,17 @@ export const Objects = (props) => {
 
     let obj = props.objects.edges.map((item, index) => {
         // console.log(item.node)
-        return   <div className={cl.sliderItemWrap} key={index}>
-            <img src={item.node.featuredImage.node.sourceUrl}/>
+        return <div className={cl.sliderItemWrap} key={index}>
+            <img src={item.node.featuredImage.node.sourceUrl} />
             <div className={cl.caption}>
                 <p>{item.node.title}</p>
-                <a href="#contactForm" onClick={ () => { callAllFunctions(item.node) } } className={classNames(cl.sliderBtn, 'pop')}>Детальніше</a>
+                <a href="#contactForm" onClick={() => { callAllFunctions(item.node) }} className={classNames(cl.sliderBtn, 'pop')}>Детальніше</a>
             </div>
         </div>
     })
 
 
-    return(
+    return (
         <section className={cl.objectsWrap}>
             <div className={classNames('titleWrap', cl.titleWrap)}>
                 <div className={classNames('title')}>
@@ -49,7 +49,6 @@ export const Objects = (props) => {
                 containerClass="slidercontainer"
                 dotListClass=""
                 draggable
-
                 focusOnSelect={false}
                 infinite
                 itemClass=""

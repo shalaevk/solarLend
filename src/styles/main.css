@@ -356,7 +356,93 @@ template {
 a:hover{
     color: lime;
 }
+
+
+
 /*Header*/
+.container-fluid{
+    padding: 0 !important;
+}
+.navbar{
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+}
+
+
+
+.navbar-nav{
+    flex-grow: 2;
+}
+.btnWrap{
+    flex-grow: 1;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.headertopnav {
+    flex: 0 0 100px;
+    max-width: 100px;
+    overflow: hidden;
+    height: 30px;
+}
+ .headertopnav button {
+    width: 50px;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    text-align: right;
+    text-transform: uppercase;
+    font: normal normal 900 12px/12px Futura PT;
+    letter-spacing: 0px;
+    color: #98BA56;
+    cursor: pointer;
+    transition: padding-left .5s;
+    margin-top: 0px;
+    top: -10px;
+    padding-right: 0;
+    transition: all 0.3s;
+
+}
+ .headertopnav button:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 18px;
+    height: 3px;
+    width: 42px;
+    background-color: #5EB752;
+    transition: all 0.3s;
+}
+ .headertopnav button:after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 10px;
+    height: 3px;
+    width: 50px;
+    background-color: #5EB752;
+    transition: all 0.3s;
+}
+
+.active button:before {
+    transform: rotate(45deg) !important;
+    width: 30px !important;
+    top: 14px !important;
+}
+.active button:after {
+    transform: rotate(-45deg);
+    width: 30px !important;
+    left: 18px !important;
+    top: 14px  !important;
+}
+.active .headertopnavbtn{
+    color: transparent
+}
+
 .phones{
     background: transparent !important;
     display: flex;
@@ -424,20 +510,193 @@ text-align: left;
 .lang a{
     color:rgba(112, 112, 112, 0.5)
 }
+.mobphone{
+    display: none;
+}
+.mobview{
+    display: none;
+}
+.phonecall{
+    display: none;
+}
+.mobLang{
+    display: none;
+}
+.mobSocialWrap{
+    display: none;
+}
+.mobaddress{
+    display: none;
+}
+@media (min-width: 1080px){
+    .navbar-nav {
+        margin-left: 3%;
+    }
+}
+@media (max-width: 1201px){
+    .navbar-nav{
+        flex-grow: 1;
+    }
+    .navbar-nav a{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    .headerPop{ 
+        max-width: 117px !important;
+        font-size: 8px !important;
+        max-height: 37px;
+        line-height: 37px !important;
+    }
+    .navbar-brand{
+        max-width: 13% !important;
+        display: block;
+    }
+    .navbar{
+        align-items: baseline;
+    }
+    .firstItm {
+        font-size: 14px;
+    }
+}
+@media (max-width: 991px){
+    .btnWrap{
+        display: none !important;
+    }
+    .mobphone{
+        display: block !important;
+    }
+    .navbar-nav{
+        text-align: center;
+        margin-top: 32px;
+    }
+    .navbar-brand {
+        max-width: 100% !important;
+        display: block;
+    }
+    .navbar-nav a{
+        font: normal normal normal 24px/43px Montserrat;
+        letter-spacing: 0px;
+        color: #000000 !important;
+        opacity: 1 !important;
+    }
+    .descLang{
+        display: none;
+    }
+    .mobLang{
+        display: block;
+    }
+    .mobSocialWrap{
+        display: block;
+
+    }
+    .mobSocialWrap a{
+        text-align: center;
+    }
+    .phonesMenuWrap{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #basic-navbar-nav{
+        position: absolute;
+        width: 100%;
+        top: 16px;
+        background-color: rgb(255, 255, 255);
+        left: 0px;
+        right: 0px;
+        margin: 42px auto 0px;
+        z-index: 12;
+    }
+    .active{
+        font-weight: 700 !important;
+    }
+ 
+}
+@media (max-width: 556px){
+    .phonecall{
+        max-width: 30px;
+        display: block;
+    }
+    .deckwiev{
+        display: none;
+    }
+    .mobview{
+        display: block;
+    }
+    .navbar {
+        align-items: flex-end;
+    }
+    .phones{
+        border: none !important;
+    }
+    .phones:after{
+        display: none;
+    }
+    .mobphone .dropdown{
+        position: static;
+    }
+
+    .dropdown-menu.show{
+        position: absolute;
+        border: none;
+        top: 56px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        display: block;
+        float: none;
+        min-width: 100%;
+    }
+    .mobaddress{
+        margin-top: 49px;
+        margin-bottom: 24px;
+        display: block;
+    }
+    .mobaddress,  .mailLink{
+        white-space: normal;
+        text-align: center;
+        font: normal normal normal 16px/19px Montserrat;
+    }
+    .phoneNum{
+        text-align: center;
+        font: normal normal normal 22px/37px Montserrat;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+    .mobaddress{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .mobaddress img{
+        width: 24px;
+        margin-right: 10px;
+    }
+    .mobaddress:hover{
+        background-color: transparent !important;
+    }
+    .logoImg{
+        max-width: 80%;
+    }
+    .navbar-brand {
+        margin-right: 0;
+        max-width: 50% !important;
+    }
+}
+@media (max-width: 385px){
+    .navbar-brand{
+        max-width: 13%;
+    }
+}
+
+
+
+
 
 /*Header*/
 
 
-.container-fluid{
-    padding: 0 !important;
-}
-.navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    background: #fff;
-}
 
 /*Title style*/
 .titleWrap{
