@@ -20,9 +20,9 @@ export const ReviewModal = ({ rewLink, handleClose, show, }) => {
     if (show) {
         return (<div className={showHideClassName}>
             <section className='modal-main rew-modal'>
-                <button onClick={handleClose} className={cl.closebtn}>
+                <div onClick={handleClose} className={cl.closebtn}>
                     <img src={close} alt="close button" />
-                </button>
+                </div>
                 <iframe width="100%" height="100%"
                     src={rewLink}
                     frameBorder="0"
