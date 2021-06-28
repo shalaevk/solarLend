@@ -11,7 +11,7 @@ import vodaphone from '../images/vodafonelogo.svg'
 import life from '../images/life.svg'
 import mail from '../images/Message.svg'
 import phonecall from '../images/phonecall.svg'
-
+import close from '../images/plus.svg'
 
 
 
@@ -48,6 +48,13 @@ export const Header = (props) => {
 
 
                 <Dropdown.Menu>
+                    <Dropdown.Toggle className="phones phoneInside" id="dropdown-basic">
+
+                        <div className="clasePhwrap">
+                            <img className="closePhone" src={close} />
+                        </div>
+
+                    </Dropdown.Toggle>
                     <Dropdown.Item className=" mobview phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" />  {props.kiyvstar.title}</Dropdown.Item>
                     <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
                     <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>

@@ -631,6 +631,20 @@ text-align: left;
         display: block;
 
     }
+    .clasePhwrap{
+        border-radius: 50%;
+        background-color: #000;
+        width: 30px;
+        height: 30px;
+    }
+    .clasePhwrap img{
+        max-width: 17px;
+        transform: rotate(45deg);
+    }
+    .phoneInside{
+        margin-left: auto;
+        margin-bottom: 40px;
+    }
     .secShadow{
         position: relative;
         z-index: 2;
