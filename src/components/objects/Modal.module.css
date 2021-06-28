@@ -52,6 +52,7 @@
     border: none;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+    cursor: pointer;
 }
 .closebtn img{
     max-width: 17px;

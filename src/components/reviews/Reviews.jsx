@@ -24,7 +24,7 @@ export const Reviews = ({ rev, setLink, showModal }) => {
                 <div className={cl.reviewIcon} onClick={() => { callAllFunctions(slide.rewvideo) }}>
                     <img src={playBtn} alt="" />
                 </div>
-                <p>{slide.rewtitleone}</p>
+                <p onClick={() => { callAllFunctions(slide.rewvideo) }}>{slide.rewtitleone}</p>
             </div>
 
         </div>

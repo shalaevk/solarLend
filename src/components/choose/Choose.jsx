@@ -64,24 +64,24 @@ export const Choose = (props) => {
                 </div>
 
                 <div className={cl.imageWrap}>
-                    <img className="img-fluid" src={props.ch.chooseimage.sourceUrl} alt="" />
+                    <img className="img-fluid" src={props.ch.chooseimage.sourceUrl} alt="image" loading="lazy" />
                 </div>
                 <div className={cl.iconswrap}>
                     <ReactWOW>
                         <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
-                            <img src={firstim} alt="" />
+                            <img src={firstim} alt="icon" loading="lazy" />
                             <p>{props.ch.chooseicons.chooseicontextone}</p>
                         </div>
                         <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
-                            <img src={secIm} alt="" />
+                            <img src={secIm} alt="icon" loading="lazy" />
                             <p>{props.ch.chooseicons.chooseicontexttwo}</p>
                         </div>
                         <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
-                            <img src={third} alt="" />
+                            <img src={third} alt="icon" loading="lazy" />
                             <p>{props.ch.chooseicons.chooseicontextthree}</p>
                         </div>
                         <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
-                            <img src={fourth} alt="" />
+                            <img src={fourth} alt="icon" loading="lazy" />
                             <p>{props.ch.chooseicons.chooseicontextfour}</p>
                         </div>
                     </ReactWOW>

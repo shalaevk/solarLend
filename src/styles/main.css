@@ -964,8 +964,11 @@ text-align: left;
     width: 25px;
     height: 2px;
     border-radius: 0;
+    background: lightgray;
 }
-
+.slidercontainer .react-multi-carousel-dot--active button{
+    background: #000 !important;
+}
 .inputWrap {
     position: relative;
 }
@@ -1046,7 +1049,7 @@ text-align: left;
         right: 70%;
     }
     .titleShade{
-        display: none;
+        display: none !important;
     }
 
 }

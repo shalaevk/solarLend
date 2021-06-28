@@ -32,9 +32,9 @@ export const Efficiency = ({ eff, lang }) => {
 
                 </div>
                 <div className={classNames(cl.imgwrap, "animate__animated animate__fadeInLeft")}>
-                    <img className='img-fluid' src={first} alt="" />
-                    <img className='img-fluid' src={sec} alt="" />
-                    <img className='img-fluid' src={third} alt="" />
+                    <img className='img-fluid' src={first} alt="image" loading="lazy" />
+                    <img className='img-fluid' src={sec} alt="image" loading="lazy" />
+                    <img className='img-fluid' src={third} alt="image" loading="lazy" />
                 </div>
                 <div className={cl.bottomText}>
                     <div className={cl.bottomTextOne}>{eff.effecttext}</div>

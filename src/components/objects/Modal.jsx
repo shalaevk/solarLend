@@ -36,9 +36,9 @@ export const Modal = ({ objData, handleClose, show, children }) => {
     if (show && objData != {}) {
         return (<div className={showHideClassName}>
             <section className='modal-main'>
-                <button onClick={handleClose} className={cl.closebtn}>
+                <div onClick={handleClose} className={cl.closebtn}>
                     <img src={close} alt="close button" />
-                </button>
+                </div>
                 <div className={cl.contentWrap}>
                     <div className={cl.leftItem}>
 
