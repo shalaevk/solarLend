@@ -12,7 +12,7 @@ import ContactForm from "./Forma";
 
 
 const AnyReactComponent = () => <div className={cl.pin}><img src={pin} alt="" /></div>;
-export const Map = () => {
+export const Map = (props) => {
 
 
 
@@ -214,7 +214,7 @@ export const Map = () => {
                 />
             </GoogleMapReact>
 
-            <ContactForm />
+            <ContactForm lang={props.lang} />
 
         </div>
     )

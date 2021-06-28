@@ -9,6 +9,29 @@ import classNames from 'classnames'
 
 
 
+
+// const CustomRightArrow = ({ onClick, ...rest }) => {
+//     const {
+//         onMove,
+//         carouselState: { currentSlide, deviceType }
+//     } = rest;
+//     // onMove means if dragging or swiping in progress.
+//     return <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()} >
+//         <img src={left} alt="left arrow" />
+//     </button>;
+// };
+// const CustomLeftArrow = ({ onClick, ...rest }) => {
+//     const {
+//         onMove,
+//         carouselState: { currentSlide, deviceType }
+//     } = rest;
+//     // onMove means if dragging or swiping in progress.
+//     return <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()} >
+//         <img src={left} alt="left arrow" />
+//     </button>;
+// };
+
+
 export const Objects = (props) => {
 
     let callAllFunctions = (content) => {
@@ -23,7 +46,9 @@ export const Objects = (props) => {
             <img src={item.node.featuredImage.node.sourceUrl} />
             <div className={cl.caption}>
                 <p>{item.node.title}</p>
-                <a href="#contactForm" onClick={() => { callAllFunctions(item.node) }} className={classNames(cl.sliderBtn, 'pop')}>Детальніше</a>
+                <a href="#contactForm" onClick={() => { callAllFunctions(item.node) }} className={classNames(cl.sliderBtn, 'pop')}>
+                    {props.lang === "uk" ? "Детальніше" : "Подробнее"}
+                </a>
             </div>
         </div>
     })
@@ -33,9 +58,9 @@ export const Objects = (props) => {
         <section className={cl.objectsWrap}>
             <div className={classNames('titleWrap', cl.titleWrap)}>
                 <div className={classNames('title')}>
-                    Реалізовані об’єкти
+                    {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}
                     <div className={classNames('titleShade', cl.titleShade)}>
-                        Реалізовані об’єкти
+                        {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}
                     </div>
                 </div>
             </div>
@@ -56,6 +81,8 @@ export const Objects = (props) => {
                 minimumTouchDrag={80}
                 renderButtonGroupOutside={false}
                 renderDotsOutside={false}
+                customRightArrow={<CustomRightArrow />}
+                customLeftArrow={<CustomLeftArrow />}
                 responsive={{
                     desktop: {
                         breakpoint: {

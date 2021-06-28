@@ -69,7 +69,15 @@
 .schedule{
     margin-left: 43px;
 }
-
+.formBtn{
+    border: none;
+    margin-top: 40px;
+}
+.formBtn:hover{
+    background: #fff;
+    color: #333;
+    border: 2px solid  #9FD833 ;
+}
 @media (max-width: 769px) {
     .addressWrap {
         position: absolute;
@@ -90,7 +98,10 @@
     .addressWrap{
         width: 90%;
     }
- 
+    .addrTitle{
+        font: normal normal bold 42px/52px Futura PT;
+        text-align: center;
+    }
     .phone a{
         font: normal normal normal 19px/26px Montserrat;
     }

@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
-import { Navbar, Nav, Button, Dropdown } from 'react-bootstrap';
 import classNames from "classnames";
 
 import * as cl from './Social.module.css'
@@ -12,19 +10,19 @@ import youTube from '../../images/youtube.svg'
 import insta from '../../images/instagram.svg'
 
 
-export const Social = () => {
+export const Social = (props) => {
 
    return (
       <div className={classNames(cl.socialWrap)}>
 
          <div className={cl.text}>
-            Приєднуйся
+            {props.lang === "uk" ? "Приєднуйся" : "Присоединяйся"}
          </div>
          <div className={cl.decorLine}></div>
          <div className={cl.social}>
-            <a href="#"> <img src={faceBook} alt="faceBook" /> </a>
-            <a href="#"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
-            <a href="#"> <img src={insta} alt="instagarm" /> </a>
+            <a href={props.facebook} target="_blank"> <img src={faceBook} alt="faceBook" /> </a>
+            <a href={props.youtube} target="_blank"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
+            <a href={props.instagram} target="_blank"> <img src={insta} alt="instagarm" /> </a>
          </div>
 
       </div>

@@ -41,3 +41,31 @@
     cursor: pointer;
     margin-bottom: 40px;
 }
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+.closebtn img{
+    max-width: 17px;
+}
+
+@media (max-width: 770px){
+    .revieWrap{
+        margin-top: 70px;
+    }
+}

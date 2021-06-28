@@ -19,7 +19,7 @@ import { Footer } from '../Footer';
 
 const Homepage = ({ data }) => {
 
-    console.log(data)
+    console.log(data.wpPage.acf.facebook)
 
     const [show, setState] = useState(false)
     const [objData, setObjData] = useState({
@@ -86,24 +86,36 @@ const Homepage = ({ data }) => {
     return (
 
         <PrimaryLayout
+
+            facebook={data.wpPage.acf.facebook}
+            youtube={data.wpPage.acf.youtube}
+            instagram={data.wpPage.acf.instagram}
+
             adress={data.wpPage.acf.adress}
             kiyvstar={data.wpPage.acf.kiyvstar}
             mail={data.wpPage.acf.mail}
             vodafone={data.wpPage.acf.vodafone}
             life={data.wpPage.acf.life}
             menu={data.allWpMenu}
+            lang={data.wpPage.locale.locale}
         >
             <div className='container-fluid'>
-                <Slider slides={data.wpPage.acf.addslide} />
-                <Efficiency eff={data.wpPage.acf} />
+                <Slider
+                    lang={data.wpPage.locale.locale}
+                    facebook={data.wpPage.acf.facebook}
+                    youtube={data.wpPage.acf.youtube}
+                    instagram={data.wpPage.acf.instagram}
+                    slides={data.wpPage.acf.addslide}
+                />
+                <Efficiency eff={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                 <Choose ch={data.wpPage.acf} />
                 <Steps st={data.wpPage.acf} />
-                <Objects setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
+                <Objects lang={data.wpPage.locale.locale} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
                 <Modal handleClose={hideModal} objData={objData} show={show} />
-                <Price pr={data.wpPage.acf} />
+                <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                 <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
-                <Map />
+                <Map lang={data.wpPage.locale.locale} />
             </div>
         </PrimaryLayout>
 
@@ -148,7 +160,13 @@ export const query = graphql`
         }
         wpPage(slug: {eq: "home"} locale: {locale: {eq: $language}}) {
             slug
+            locale {
+                locale
+              }
             acf {
+                facebook
+                youtube
+                instagram
                 adress
                 kiyvstar {
                     title
@@ -195,6 +213,7 @@ export const query = graphql`
                 effectsubtext
                 effecttext
                 effecttitle
+                afteraccent
                 effectaccent
                 priceblock {
                     pricetwo

@@ -9,16 +9,17 @@ import sec from '../../images/DJI_0070.png'
 import third from '../../images/2018-5.1.png'
 
 
-export const Efficiency = ({ eff }) => {
+export const Efficiency = ({ eff, lang }) => {
 
+    console.log(lang)
 
     return (
         <section className={cl.efficiency}>
             <div className='titleWrap'>
                 <div className='title'>
-                    {eff.effecttitle} <span> {eff.effectaccent} </span> ефективніше
+                    {eff.effecttitle} <span> {eff.effectaccent} </span> {eff.afteraccent}
                     <div className='titleShade'>
-                        {eff.effecttitle} <span>{eff.effectaccent}</span> ефективніше
+                        {eff.effecttitle} <span> {eff.effectaccent} </span> {eff.afteraccent}
                     </div>
                 </div>
 
@@ -32,7 +33,9 @@ export const Efficiency = ({ eff }) => {
             <div className={cl.bottomText}>
                 <div className={cl.bottomTextOne}>{eff.effecttext}</div>
                 <div className={cl.bottomTextTwo}>{eff.effectsubtext}</div>
-                <a href='#conatctForm' className={classNames('pop', cl.popCenter)}>Отримати консультацію</a>
+                <a href='#conatctForm' className={classNames('pop', cl.popCenter)}>
+                    {lang === "uk" ? "Отримати консультацію" : "Получить консультацию"}
+                </a>
             </div>
 
         </section>

@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-export const Price = ({ pr }) => {
-    console.log(pr.pricetitle)
+export const Price = ({ pr, lang }) => {
+
     return (
         <section className={cl.priceSection}>
             <div className={classNames('titleWrap', cl.titleWrap)}>
@@ -19,38 +19,54 @@ export const Price = ({ pr }) => {
 
             <div className={cl.priceWrap}>
                 <div className={cl.priceItem}>
-                    <p className={cl.vid}>Від</p>
+                    <p className={cl.vid}>
+                        {lang === "uk" ? "Вiд" : "От"}
+                    </p>
                     <p className={cl.price}>{pr.priceblock.priceone}</p>
                     <p className={cl.za}>за кВт</p>
                     <p className={cl.priceTitle}>{pr.priceblock.pricetitleone}</p>
-                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
+                        {lang === "uk" ? "Замовити" : "Заказать"}
+                    </a>
                     <div className={cl.decor}></div>
                     <p className={cl.text}>{pr.priceblock.pricetextone}</p>
                 </div>
                 <div className={cl.priceItem}>
-                    <p className={cl.vid}>Від</p>
+                    <p className={cl.vid}>
+                        {lang === "uk" ? "Вiд" : "От"}
+                    </p>
                     <p className={cl.price}>{pr.priceblock.pricetwo}</p>
                     <p className={cl.za}>за кВт</p>
                     <p className={cl.priceTitle}>{pr.priceblock.pricetitletwo}</p>
-                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
+                        {lang === "uk" ? "Замовити" : "Заказать"}
+                    </a>
                     <div className={cl.decor}></div>
                     <p className={cl.text}>{pr.priceblock.pricetexttwo}</p>
                 </div>
                 <div className={cl.priceItem}>
-                    <p className={cl.vid}>Від</p>
+                    <p className={cl.vid}>
+                        {lang === "uk" ? "Вiд" : "От"}
+                    </p>
                     <p className={cl.price}>{pr.priceblock.pricethree}</p>
                     <p className={cl.za}>за кВт</p>
                     <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
-                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
+                        {lang === "uk" ? "Замовити" : "Заказать"}
+                    </a>
                     <div className={cl.decor}></div>
                     <p className={cl.text}>{pr.priceblock.pricetextthree}</p>
                 </div>
                 <div className={cl.priceItem}>
-                    <p className={cl.vid}>Від</p>
+                    <p className={cl.vid}>
+                        {lang === "uk" ? "Вiд" : "От"}
+                    </p>
                     <p className={cl.price}>{pr.priceblock.pricefour}</p>
                     <p className={cl.za}>за кВт</p>
                     <p className={cl.priceTitle}>Сонячні електростанції гібридні</p>
-                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                    <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
+                        {lang === "uk" ? "Замовити" : "Заказать"}
+                    </a>
                     <div className={cl.decor}></div>
                     <p className={cl.text}>{pr.priceblock.pricetextfour}</p>
                 </div>

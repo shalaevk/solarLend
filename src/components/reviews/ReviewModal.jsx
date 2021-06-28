@@ -1,14 +1,14 @@
 import React, { useRef, useState } from "react"
-import * as cl  from './Reviews.module.css'
+import * as cl from './Reviews.module.css'
 
-// import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import close from '../../images/plus.svg'
 
 
 
 
-export const ReviewModal = ({rewLink, handleClose, show, }) => {
-    // console.log({ handleClose, show, children })
+export const ReviewModal = ({ rewLink, handleClose, show, }) => {
+
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
     // let videoRef = useRef(null);
 
@@ -17,20 +17,22 @@ export const ReviewModal = ({rewLink, handleClose, show, }) => {
     //     handleClose()
     //     videoRef.current.pause()
     // }
-    if(show){
+    if (show) {
         return (<div className={showHideClassName}>
             <section className='modal-main rew-modal'>
-                <button className="close-btn" >Close</button>
+                <button onClick={handleClose} className={cl.closebtn}>
+                    <img src={close} alt="close button" />
+                </button>
                 <iframe width="100%" height="100%"
-                        src={rewLink}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
+                    src={rewLink}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
                 </iframe>
             </section>
         </div>)
     }
-    if(!show){
+    if (!show) {
         return (
             <></>
         );

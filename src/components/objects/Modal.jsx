@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import * as cl from './Modal.module.css'
 import Carousel from 'react-multi-carousel'
 import classNames from 'classnames'
-
+import close from '../../images/plus.svg'
 
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
@@ -36,7 +36,9 @@ export const Modal = ({ objData, handleClose, show, children }) => {
     if (show && objData != {}) {
         return (<div className={showHideClassName}>
             <section className='modal-main'>
-                <button onClick={handleClose} className={cl.closebtn}></button>
+                <button onClick={handleClose} className={cl.closebtn}>
+                    <img src={close} alt="close button" />
+                </button>
                 <div className={cl.contentWrap}>
                     <div className={cl.leftItem}>
 

@@ -44,12 +44,17 @@
     width: 25px;
     height: 25px;
     background: #000;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     border: none;
-    background-image: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/plus.svg);
-    background-repeat: no-repeat;
-    background-size: 17px;
-    background-position: 50%;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.closebtn img{
+    max-width: 17px;
 }
 .mobImages{
     display: none;
@@ -57,6 +62,12 @@
 }
 .objSlider{
     position: initial;
+}
+.popCenter:hover{
+    border-color:  #98BA56;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
 }
 @media (max-width: 1015px){
     .contentWrap{

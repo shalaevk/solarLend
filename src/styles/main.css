@@ -353,9 +353,9 @@ template {
     scroll-behavior: smooth;
     text-decoration: none;
 }
-a:hover{
+/* a:hover{
     color: lime;
-}
+} */
 
 
 
@@ -509,8 +509,20 @@ text-align: left;
     max-width: 176px !important;
     line-height: 45px !important;
 }
+.headerPop:hover{
+    color: #fff !important;
+    background: #98BA56 !important;
+    text-decoration: none;
+}
+
+
+
+
 .lang a{
     color:rgba(112, 112, 112, 0.5)
+}
+.lang .active{
+    font-weight: 700;
 }
 .mobphone{
     display: none;
@@ -617,6 +629,41 @@ text-align: left;
     .phonecall{
         max-width: 30px;
         display: block;
+
+    }
+    .secShadow{
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+    .secShadow:before,
+    .secShadow:after{
+        content: "";
+        display: block;
+;;        border-radius: 50%;
+        position: absolute;
+    }
+    .secShadow:before{
+        width: 36px;
+        height: 36px;
+        left: -3px;
+        top: 1px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        box-shadow: inset 1px 1px 13px -2px #5EB752;
+        opacity: 0.2;
+        z-index: 0;
+    }
+    .secShadow:after{
+        width: 34px;
+        height: 34px;
+        left: -2px;
+        top: -2px;
+        margin: 0 auto;
+        box-shadow: inset 1px 1px 13px -2px #5EB752;
+        opacity: 0.5;
+        z-index: 1;
     }
     .deckwiev{
         display: none;
@@ -713,6 +760,9 @@ text-align: left;
     position: relative;
 
 }
+.title span{
+    color: #5EB752;
+}
 .titleShade{
     text-shadow: -77px -36px 7px rgba(150, 150, 150, 0.5);
     display: block;
@@ -721,9 +771,12 @@ text-align: left;
     top: 0;
     z-index: -1;
 }
-.title span{
-    color: #5EB752;
-}
+.titleShade span{
+
+    color: transparent !important;
+
+} 
+
 /*Title style*/
 
 
@@ -741,9 +794,10 @@ text-align: left;
     max-width: 400px;
     width: 339px;
     height: 48px;
-    line-height: 48px;
+    line-height: 44px;
     cursor: pointer;
     display: block;
+    border: 2px solid transparent;
 }
 /*Button style*/
 
@@ -1007,7 +1061,9 @@ text-align: left;
         left: 0;
         right: 0;
         margin: 0 auto;
+        bottom: 13%;
     }
+ 
     .topSlider  .carousel-control-prev{
         right: 100px;
     }
@@ -1019,6 +1075,7 @@ text-align: left;
     }
     .titleWrap{
         font: normal normal bold 28px/42px Futura PT;
+        padding-top: 70px;
     }
     .pop{
         width: 90%;

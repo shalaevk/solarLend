@@ -12,7 +12,7 @@ import life from '../../images/life.svg'
 import mail from '../../images/Message.svg'
 
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const WEBSITE_URL = 'https://solarland.s-tet.top';
     const FORM_ID = '100'; //Form id that provides Contact Form 7
 
@@ -110,40 +110,43 @@ const ContactForm = () => {
         <div id="conatctForm" className={cl.addressWrap}>
             <div className={cl.addressTop}>
                 <div className={cl.addrTitle}>
-                    Залишити заявку
+                    {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
                 </div>
 
 
                 <form onSubmit={handleSubmit}>
                     <fieldset>
                         <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                            <label className={classActive} htmlFor="fullname">Ім’я*</label>
+
                             <input onClick={setClassActive}
                                 id="fullname"
                                 name="fullname"
                                 type="text"
+                                placeholder={props.lang === "uk" ? "Ім’я*" : "Імя*"}
                                 onChange={handleChange}
                                 value={values.fullname}
                                 required
                             />
                         </div>
                         <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                            <label className={classActive} htmlFor="phone">Номер телефону*</label>
+
                             <input
                                 id="phone"
                                 name="phone"
                                 type="phone"
+                                placeholder={props.lang === "uk" ? "Номер телефону*" : "Номер телефона*"}
                                 onChange={handleChange}
                                 value={values.number}
                                 required
                             />
                         </div>
                         <div className={classNames(cl.inputWrap, 'inputWrap')}>
-                            <label className={classActive} className='active' htmlFor="email">E-mail*</label>
+
                             <input
                                 id="email"
                                 name="email"
                                 type="email"
+                                placeholder="E-mail*"
                                 onChange={handleChange}
                                 value={values.email}
                                 required
@@ -156,13 +159,20 @@ const ContactForm = () => {
                             type="submit"
                             value="Send Message"
                             disabled={isSubmitting}
-                        >замовити</button>
+                        >
+                            {props.lang === "uk" ? "Замовити" : "Заказать"}
+
+                        </button>
                     </div>
                     {messageSent && isSuccessMessage && (
-                        <div>Message sent successfully!</div>
+                        <div>
+                            {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
+                        </div>
                     )}
                     {messageSent && !isSuccessMessage && (
-                        <div>something went wrong please try again.</div>
+                        <div>
+                            something went wrong please try again.
+                        </div>
                     )}
                 </form>
 

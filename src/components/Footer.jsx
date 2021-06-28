@@ -25,23 +25,23 @@ export const Footer = (props) => {
          <div className={cl.footerMiddleRight}>
             <img className={cl.decor} src={decor} alt="decor" />
             <div className={cl.footerText}>
-               Приєднуйся до соціальних мереж
+               {props.lang === "uk" ? "Приєднуйся до соціальних мереж" : "Присоединяйся к социальным сетям"}
             </div>
             <div className={cl.decorLine}></div>
             <div className={cl.social}>
-               <a href="#"> <img src={faceBook} alt="faceBook" /> </a>
-               <a href="#"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
-               <a href="#"> <img src={insta} alt="instagarm" /> </a>
+               <a href={props.facebook} target="_blank"> <img src={faceBook} alt="faceBook" /> </a>
+               <a href={props.youtube} target="_blank"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
+               <a href={props.instagram} target="_blank"> <img src={insta} alt="instagarm" /> </a>
             </div>
          </div>
       </div>
       <div className={cl.footerCopy}>
          <div className={cl.copyLeft}>
-            <span> Разработка сайта: </span><a href="#">ESTET DESIGN GROUP</a>
+            <span> {props.lang === "uk" ? "Рорзробка сайта:" : "Разработка сайта:"} </span><a href="#">ESTET DESIGN GROUP</a>
          </div>
          <div className={cl.copyRight}>
-            <p>© 2021 Solarland. Усі права захищенні</p>
-            <p>Політика конфіденційності</p>
+            <p>© 2021 Solarland. {props.lang === "uk" ? "Усі права захищенні" : "Все права защищены:"} </p>
+            <p>{props.lang === "uk" ? "Політика конфіденційності" : "Политика конфиденциальности"}</p>
          </div>
       </div>
    </footer>

@@ -31,9 +31,16 @@ const PrimaryLayout = (props) => {
             vodafone={props.vodafone}
             life={props.life}
             menu={menu}
+            lang={props.lang}
         />
         {props.children}
-        <Footer menu={footerMenuArr} />
+        <Footer
+            lang={props.lang}
+            facebook={props.facebook}
+            youtube={props.youtube}
+            instagram={props.instagram}
+            menu={footerMenuArr}
+        />
     </>
 }
 

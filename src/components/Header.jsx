@@ -17,7 +17,9 @@ import phonecall from '../images/phonecall.svg'
 
 
 export const Header = (props) => {
-    // console.log(props.menu)
+
+
+
     const [cls, setCls] = useState("");
 
     let setClass = () => {
@@ -34,7 +36,11 @@ export const Header = (props) => {
             <Dropdown>
                 <div className="dropWrap phones">
                     <Dropdown.Toggle className="phones" id="dropdown-basic">
-                        <img className="phonecall" src={phonecall} />
+
+                        <div className="secShadow">
+                            <img className="phonecall" src={phonecall} />
+                        </div>
+
                     </Dropdown.Toggle>
 
                     <Dropdown.Item className="firstItm deckwiev phoneNum" href={props.kiyvstar.url}> {props.kiyvstar.title}</Dropdown.Item>
@@ -87,7 +93,7 @@ export const Header = (props) => {
                     </div>
 
 
-                    <Social />
+                    <Social lang={props.lang} />
                 </div>
 
             </Nav>
@@ -116,7 +122,9 @@ export const Header = (props) => {
                     <Link activeClassName="active" to="/ru"> RU </Link>
 
                 </div>
-                <a href='#conatctForm' className={'pop headerPop'}> Залишити заявку </a>
+                <a href='#conatctForm' className={'pop headerPop'}>
+                    {props.lang === "uk" ? "Залишити заявку " : "Оставить заявку"}
+                </a>
 
             </div>
 

@@ -5,6 +5,10 @@ import classNames from "classnames";
 import * as cl from './Slider.module.css';
 import right from '../../images/right.svg'
 import left from '../../images/left.svg'
+import { Social } from "../social/Social";
+import faceBook from '../../images/facebookblack.svg'
+import youTube from '../../images/youtube.svg'
+import insta from '../../images/instagram.svg'
 
 const Slider = (props) => {
 
@@ -37,11 +41,29 @@ const Slider = (props) => {
 
     return (
         <div className={cl.carouselWrap}>
-            <Carousel prevIcon={<img src={ left} />} nextIcon={<img src={ right} />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
+            <Carousel prevIcon={<img src={left} />} nextIcon={<img src={right} />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
 
                 {mainSliderArray}
 
             </Carousel>
+            <div className={cl.socWrap}>
+
+                <div className={classNames(cl.socialWrap)}>
+
+                    <div className={cl.textLink}>
+                        {props.lang === "uk" ? "Приєднуйся" : "Присоединяйся"}
+                    </div>
+                    <div className={cl.decorLine}></div>
+                    <div className={cl.social}>
+                        <a href={props.facebook} target="_blank"> <img src={faceBook} alt="faceBook" /> </a>
+                        <a href={props.youtube} target="_blank"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
+                        <a href={props.instagram} target="_blank"> <img src={insta} alt="instagarm" /> </a>
+                    </div>
+
+                </div>
+
+            </div>
+
             <div className={cl.index}>{index + 1}/{2}</div>
         </div>
     )
