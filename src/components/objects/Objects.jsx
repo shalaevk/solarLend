@@ -6,7 +6,7 @@ import left from '../../images/leftCarousel.svg'
 
 import * as cl from './Objects.module.css'
 import classNames from 'classnames'
-
+import ReactWOW from 'react-wow';
 
 
 
@@ -55,70 +55,72 @@ export const Objects = (props) => {
 
 
     return (
-        <section className={cl.objectsWrap}>
-            <div className={classNames('titleWrap', cl.titleWrap)}>
-                <div className={classNames('title')}>
-                    {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}
-                    <div className={classNames('titleShade', cl.titleShade)}>
+        <ReactWOW>
+            <section className={classNames(cl.objectsWrap, "animate__animated animate__fadeInUp")}>
+                <div className={classNames('titleWrap', cl.titleWrap)}>
+                    <div className={classNames('title')}>
                         {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}
+                        <div className={classNames('titleShade', cl.titleShade)}>
+                            {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <Carousel
-                additionalTransfrom={0}
-                arrows
-                autoPlaySpeed={3000}
-                centerMode={false}
-                className={cl.objSlider}
-                containerClass="slidercontainer"
-                dotListClass=""
-                draggable
-                focusOnSelect={false}
-                infinite
-                itemClass=""
-                keyBoardControl
-                minimumTouchDrag={80}
-                renderButtonGroupOutside={false}
-                renderDotsOutside={false}
-                // customRightArrow={<CustomRightArrow />}
-                // customLeftArrow={<CustomLeftArrow />}
-                responsive={{
-                    desktop: {
-                        breakpoint: {
-                            max: 3000,
-                            min: 1024,
+                <Carousel
+                    additionalTransfrom={0}
+                    arrows
+                    autoPlaySpeed={3000}
+                    centerMode={false}
+                    className={cl.objSlider}
+                    containerClass="slidercontainer"
+                    dotListClass=""
+                    draggable
+                    focusOnSelect={false}
+                    infinite
+                    itemClass=""
+                    keyBoardControl
+                    minimumTouchDrag={80}
+                    renderButtonGroupOutside={false}
+                    renderDotsOutside={false}
+                    // customRightArrow={<CustomRightArrow />}
+                    // customLeftArrow={<CustomLeftArrow />}
+                    responsive={{
+                        desktop: {
+                            breakpoint: {
+                                max: 3000,
+                                min: 1024,
+                            },
+                            items: 3,
+                            partialVisibilityGutter: 40
                         },
-                        items: 3,
-                        partialVisibilityGutter: 40
-                    },
-                    mobile: {
-                        breakpoint: {
-                            max: 770,
-                            min: 0
+                        mobile: {
+                            breakpoint: {
+                                max: 770,
+                                min: 0
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
                         },
-                        items: 1,
-                        partialVisibilityGutter: 30
-                    },
-                    tablet: {
-                        breakpoint: {
-                            max: 1024,
-                            min: 770
-                        },
-                        items: 2,
-                        partialVisibilityGutter: 30
-                    }
-                }}
-                showDots={true}
-                sliderClass="sliderClass"
-                slidesToSlide={1}
-                swipeable
-            >
+                        tablet: {
+                            breakpoint: {
+                                max: 1024,
+                                min: 770
+                            },
+                            items: 2,
+                            partialVisibilityGutter: 30
+                        }
+                    }}
+                    showDots={true}
+                    sliderClass="sliderClass"
+                    slidesToSlide={1}
+                    swipeable
+                >
 
-                {obj}
+                    {obj}
 
 
-            </Carousel>
-        </section>
+                </Carousel>
+            </section>
+        </ReactWOW>
     )
 }

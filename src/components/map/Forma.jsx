@@ -4,6 +4,7 @@ import axios from 'axios'
 import classNames from "classnames";
 import * as cl from './Forma.module.css'
 
+import ReactWOW from 'react-wow'
 
 import location from '../../images/Location.svg'
 import kiyvstar from '../../images/kiyvstar.svg'
@@ -107,90 +108,92 @@ const ContactForm = (props) => {
     }, [isSuccessMessage, messageSent])
 
     return (
-        <div id="conatctForm" className={cl.addressWrap}>
-            <div className={cl.addressTop}>
-                <div className={cl.addrTitle}>
-                    {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
-                </div>
-
-
-                <form onSubmit={handleSubmit}>
-                    <fieldset>
-                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                            <input onClick={setClassActive}
-                                id="fullname"
-                                name="fullname"
-                                type="text"
-                                placeholder={props.lang === "uk" ? "Ім’я*" : "Імя*"}
-                                onChange={handleChange}
-                                value={values.fullname}
-                                required
-                            />
-                        </div>
-                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                            <input
-                                id="phone"
-                                name="phone"
-                                type="phone"
-                                placeholder={props.lang === "uk" ? "Номер телефону*" : "Номер телефона*"}
-                                onChange={handleChange}
-                                value={values.number}
-                                required
-                            />
-                        </div>
-                        <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="E-mail*"
-                                onChange={handleChange}
-                                value={values.email}
-                                required
-                            />
-                        </div>
-
-                    </fieldset>
-                    <div>
-                        <button className={classNames('pop', cl.formBtn)}
-                            type="submit"
-                            value="Send Message"
-                            disabled={isSubmitting}
-                        >
-                            {props.lang === "uk" ? "Замовити" : "Заказать"}
-
-                        </button>
+        <ReactWOW>
+            <div id="conatctForm" className={classNames(cl.addressWrap, "animate__animated animate__fadeInRight")}>
+                <div className={cl.addressTop}>
+                    <div className={cl.addrTitle}>
+                        {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
                     </div>
-                    {messageSent && isSuccessMessage && (
-                        <div>
-                            {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
-                        </div>
-                    )}
-                    {messageSent && !isSuccessMessage && (
-                        <div>
-                            something went wrong please try again.
-                        </div>
-                    )}
-                </form>
 
-            </div>
-            <div className={cl.addressBottom}>
-                <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
-                <div className={cl.phonesMobWrap}>
 
-                    <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
-                    <p className={cl.phone}><img src={vodaphone} alt="" /><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
-                    <p className={cl.phone}><img src={life} alt="" /><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
+                    <form onSubmit={handleSubmit}>
+                        <fieldset>
+                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                <input onClick={setClassActive}
+                                    id="fullname"
+                                    name="fullname"
+                                    type="text"
+                                    placeholder={props.lang === "uk" ? "Ім’я*" : "Імя*"}
+                                    onChange={handleChange}
+                                    value={values.fullname}
+                                    required
+                                />
+                            </div>
+                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="phone"
+                                    placeholder={props.lang === "uk" ? "Номер телефону*" : "Номер телефона*"}
+                                    onChange={handleChange}
+                                    value={values.number}
+                                    required
+                                />
+                            </div>
+                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="E-mail*"
+                                    onChange={handleChange}
+                                    value={values.email}
+                                    required
+                                />
+                            </div>
+
+                        </fieldset>
+                        <div>
+                            <button className={classNames('pop', cl.formBtn)}
+                                type="submit"
+                                value="Send Message"
+                                disabled={isSubmitting}
+                            >
+                                {props.lang === "uk" ? "Замовити" : "Заказать"}
+
+                            </button>
+                        </div>
+                        {messageSent && isSuccessMessage && (
+                            <div>
+                                {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
+                            </div>
+                        )}
+                        {messageSent && !isSuccessMessage && (
+                            <div>
+                                something went wrong please try again.
+                            </div>
+                        )}
+                    </form>
 
                 </div>
+                <div className={cl.addressBottom}>
+                    <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
+                    <div className={cl.phonesMobWrap}>
 
-                <p className={cl.mail}><img src={mail} alt="" /><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
-                <p className={cl.schedule}>пн. - пт. 9:00 до 18:00</p>
+                        <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
+                        <p className={cl.phone}><img src={vodaphone} alt="" /><a href="tel:+380957839000"> +38 (095) 783-90-00</a></p>
+                        <p className={cl.phone}><img src={life} alt="" /><a href="tel:+380637839000">  +38 (063) 783-90-00</a></p>
+
+                    </div>
+
+                    <p className={cl.mail}><img src={mail} alt="" /><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
+                    <p className={cl.schedule}>пн. - пт. 9:00 до 18:00</p>
+                </div>
             </div>
-        </div>
+        </ReactWOW>
     )
 };
 

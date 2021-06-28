@@ -17,6 +17,7 @@ import { Footer } from '../Footer';
 
 
 
+
 const Homepage = ({ data }) => {
 
     console.log(data.wpPage.acf.facebook)
@@ -109,6 +110,7 @@ const Homepage = ({ data }) => {
                 />
                 <Efficiency eff={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                 <Choose ch={data.wpPage.acf} />
+
                 <Steps st={data.wpPage.acf} />
                 <Objects lang={data.wpPage.locale.locale} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
                 <Modal handleClose={hideModal} objData={objData} show={show} />

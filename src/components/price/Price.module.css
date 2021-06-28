@@ -19,6 +19,18 @@
     padding: 40px;
     transition: all 0.3s;
 }
+.priceItem:first-child{
+animation-delay: 0.6s;
+}
+.priceItem:nth-child(2){
+animation-delay: 0.4s;
+}
+.priceItem:nth-child(3){
+animation-delay: 0.2s;
+}
+.priceItem:nth-child(4){
+
+}
 .priceItem:hover{
     -webkit-box-shadow: 0px 0px 29px -9px rgba(0,0,0,0.33);
     box-shadow: 0px 0px 29px -9px rgba(0,0,0,0.33);

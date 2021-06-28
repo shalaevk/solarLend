@@ -1,8 +1,9 @@
-import React, {useState} from "react"
-import * as cl  from './Choose.module.css'
+import React, { useState } from "react"
+import * as cl from './Choose.module.css'
 import classNames from 'classnames'
 
-import solar from '../../images/solorp.png'
+import ReactWOW from 'react-wow'
+
 import firstim from '../../images/firstIcon.svg'
 import secIm from '../../images/secondicon.svg'
 import third from '../../images/thirdIcon.svg'
@@ -13,7 +14,8 @@ export const Choose = (props) => {
 
 
     return (
-            <section className={classNames(cl.choose, '')}>
+        <ReactWOW>
+            <section className={classNames(cl.choose, "animate__animated animate__fadeInUp")}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title', cl.title)} >
                         {props.ch.choosetitle}
@@ -22,8 +24,10 @@ export const Choose = (props) => {
                         </div>
                     </div>
                 </div>
+
                 <div className={classNames(cl.itemWrap)}>
-                        <div className={cl.item}>
+                    <ReactWOW>
+                        <div className={classNames(cl.item, "animate__animated animate__fadeInUp")}>
                             <div className={cl.num}>
                                 01
                             </div>
@@ -34,7 +38,7 @@ export const Choose = (props) => {
                                 {props.ch.chooseblocks.choosetextone}
                             </div>
                         </div>
-                        <div className={cl.item}>
+                        <div className={classNames(cl.item, "animate__animated animate__fadeInUp")}>
                             <div className={cl.num}>
                                 02
                             </div>
@@ -45,7 +49,7 @@ export const Choose = (props) => {
                                 {props.ch.chooseblocks.choosetexttwo}
                             </div>
                         </div>
-                        <div className={cl.item}>
+                        <div className={classNames(cl.item, "animate__animated animate__fadeInUp")}>
                             <div className={cl.num}>
                                 03
                             </div>
@@ -56,29 +60,33 @@ export const Choose = (props) => {
                                 {props.ch.chooseblocks.choosetextthree}
                             </div>
                         </div>
-
+                    </ReactWOW>
                 </div>
+
                 <div className={cl.imageWrap}>
-                    <img className="img-fluid" src={props.ch.chooseimage.sourceUrl} alt=""/>
+                    <img className="img-fluid" src={props.ch.chooseimage.sourceUrl} alt="" />
                 </div>
                 <div className={cl.iconswrap}>
-                    <div className={cl.iconItem}>
-                        <img src={firstim} alt=""/>
-                        <p>{props.ch.chooseicons.chooseicontextone}</p>
-                    </div>
-                    <div className={cl.iconItem}>
-                        <img src={secIm} alt=""/>
-                        <p>{props.ch.chooseicons.chooseicontexttwo}</p>
-                    </div>
-                    <div className={cl.iconItem}>
-                        <img src={third} alt=""/>
-                        <p>{props.ch.chooseicons.chooseicontextthree}</p>
-                    </div>
-                    <div className={cl.iconItem}>
-                        <img src={fourth} alt=""/>
-                        <p>{props.ch.chooseicons.chooseicontextfour}</p>
-                    </div>
+                    <ReactWOW>
+                        <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
+                            <img src={firstim} alt="" />
+                            <p>{props.ch.chooseicons.chooseicontextone}</p>
+                        </div>
+                        <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
+                            <img src={secIm} alt="" />
+                            <p>{props.ch.chooseicons.chooseicontexttwo}</p>
+                        </div>
+                        <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
+                            <img src={third} alt="" />
+                            <p>{props.ch.chooseicons.chooseicontextthree}</p>
+                        </div>
+                        <div className={classNames(cl.iconItem, "animate__animated animate__fadeInLeft")}>
+                            <img src={fourth} alt="" />
+                            <p>{props.ch.chooseicons.chooseicontextfour}</p>
+                        </div>
+                    </ReactWOW>
                 </div>
             </section>
+        </ReactWOW>
     )
 }
