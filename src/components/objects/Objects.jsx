@@ -81,8 +81,8 @@ export const Objects = (props) => {
                 minimumTouchDrag={80}
                 renderButtonGroupOutside={false}
                 renderDotsOutside={false}
-                customRightArrow={<CustomRightArrow />}
-                customLeftArrow={<CustomLeftArrow />}
+                // customRightArrow={<CustomRightArrow />}
+                // customLeftArrow={<CustomLeftArrow />}
                 responsive={{
                     desktop: {
                         breakpoint: {
