@@ -11,6 +11,7 @@ import kiyvstar from '../../images/kiyvstar.svg'
 import vodaphone from '../../images/vodafonelogo.svg'
 import life from '../../images/life.svg'
 import mail from '../../images/Message.svg'
+import check from '../../images/checkgreen.svg'
 
 
 const ContactForm = (props) => {
@@ -112,75 +113,86 @@ const ContactForm = (props) => {
         <ReactWOW>
             <div id="conatctForm" className={classNames(cl.addressWrap, "animate__animated animate__fadeInRight")}>
 
-                <div className={classNames(cl.addressTop, hideForm)}>
 
-                    <div className={cl.addrTitle}>
-                        {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
-                    </div>
-
-
-                    <form onSubmit={handleSubmit}>
-                        <fieldset>
-                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                                <input onClick={setClassActive}
-                                    id="fullname"
-                                    name="fullname"
-                                    type="text"
-                                    placeholder={props.lang === "uk" ? "Ім’я*" : "Імя*"}
-                                    onChange={handleChange}
-                                    value={values.fullname}
-                                    required
-                                />
-                            </div>
-                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                                <input
-                                    id="phone"
-                                    name="phone"
-                                    type="phone"
-                                    placeholder={props.lang === "uk" ? "Номер телефону*" : "Номер телефона*"}
-                                    onChange={handleChange}
-                                    value={values.number}
-                                    required
-                                />
-                            </div>
-                            <div className={classNames(cl.inputWrap, 'inputWrap')}>
-
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    placeholder="E-mail"
-                                    onChange={handleChange}
-                                    value={values.email}
-
-                                />
-                            </div>
-
-                        </fieldset>
-                        <div>
-                            <button className={classNames('pop', cl.formBtn)}
-                                type="submit"
-                                value="Send Message"
-                                disabled={isSubmitting}
-                            >
-                                {props.lang === "uk" ? "Замовити" : "Заказать"}
-
-                            </button>
-                        </div>
-
-                    </form>
-
-                </div>
 
                 {messageSent && isSuccessMessage && (
 
-                    <div>
-                        {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
+                    <div className={classNames(cl.addressTop, cl.thankWrap)}>
+
+                        <div className={cl.checkWrap}>
+                            <img src={check} alt="check" />
+                        </div>
+                        <div className={cl.addrTitle, cl.thanktitle}>
+                            {props.lang === "uk" ? "Заявка прийнята" : "Заявка принята"}
+                        </div>
+                        <div className={cl.thanktext}>
+                            {props.lang === "uk" ? "Спасибі, ми зв’яжемося з вами найближчим часом." : "Спасибо, мы свяжемся с вами в ближайшее время."}
+                        </div>
 
                     </div>
-                )}
+                ) || (
+                        <div className={classNames(cl.addressTop, hideForm)}>
+
+                            <div className={cl.addrTitle}>
+                                {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
+                            </div>
+
+
+                            <form onSubmit={handleSubmit}>
+                                <fieldset>
+                                    <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                        <input onClick={setClassActive}
+                                            id="fullname"
+                                            name="fullname"
+                                            type="text"
+                                            placeholder={props.lang === "uk" ? "Ім’я*" : "Імя*"}
+                                            onChange={handleChange}
+                                            value={values.fullname}
+                                            required
+                                        />
+                                    </div>
+                                    <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                        <input
+                                            id="phone"
+                                            name="phone"
+                                            type="phone"
+                                            placeholder={props.lang === "uk" ? "Номер телефону*" : "Номер телефона*"}
+                                            onChange={handleChange}
+                                            value={values.number}
+                                            required
+                                        />
+                                    </div>
+                                    <div className={classNames(cl.inputWrap, 'inputWrap')}>
+
+                                        <input
+                                            id="email"
+                                            name="email"
+                                            type="email"
+                                            placeholder="E-mail"
+                                            onChange={handleChange}
+                                            value={values.email}
+
+                                        />
+                                    </div>
+
+                                </fieldset>
+                                <div>
+                                    <button className={classNames('pop', cl.formBtn)}
+                                        type="submit"
+                                        value="Send Message"
+                                        disabled={isSubmitting}
+                                    >
+                                        {props.lang === "uk" ? "Замовити" : "Заказать"}
+
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    )}
                 {messageSent && !isSuccessMessage && (
                     <div>
                         {props.lang === "uk" ? "Вибачте Ваше повідомлення не було надіслано. Спробуйте будьласка пiзнiше" : "Извините Ваше сообщение не было отправлено. Пожалуйста попробуйте позже"}

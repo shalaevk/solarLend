@@ -85,6 +85,19 @@
 .hideForm{
     display: none;
 }
+.thankWrap,
+.thanktitle{
+    text-align: center;
+}
+.thanktitle{
+    font-size: 49px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.thanktext{
+    color: #9FD833;
+}
 @media (max-width: 769px) {
     .addressWrap {
         position: absolute;
