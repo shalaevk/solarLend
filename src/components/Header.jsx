@@ -38,7 +38,7 @@ export const Header = (props) => {
                     <Dropdown.Toggle className="phones" id="dropdown-basic" >
 
                         <div className="secShadow" onClick={() => {
-                            setPosition("statClass")
+                            setPosition("")
                         }}>
                             <img className="phonecall" src={phonecall} />
                         </div>

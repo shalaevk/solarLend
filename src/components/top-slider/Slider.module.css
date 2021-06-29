@@ -29,9 +29,7 @@
 .index{
     color: #fff;
     font-size: 40px;
-    position: absolute;
-    bottom: 4%;
-    left: 11%;
+    margin-left: 10px;
     font-weight: 200;
 }
 .mobBtn:hover{

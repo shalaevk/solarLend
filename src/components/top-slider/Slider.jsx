@@ -5,25 +5,38 @@ import classNames from "classnames";
 import * as cl from './Slider.module.css';
 import right from '../../images/right.svg'
 import left from '../../images/left.svg'
-import { Social } from "../social/Social";
 import faceBook from '../../images/facebookblack.svg'
 import youTube from '../../images/youtube.svg'
 import insta from '../../images/instagram.svg'
 
+
+
+
+const ArrowLeft = (props) => {
+    return (
+        <>
+            <img src={left} alt="left arrow" />
+            <div className={cl.index}>{props.index + 1}/{props.mainSliderArray.length}</div>
+        </>
+
+    )
+}
+
+
+
+
 const Slider = (props) => {
 
-    const mainSliderArray = props.slides.map((slide) => {
-        return <Carousel.Item>
-
-
+    const mainSliderArray = props.slides.map((slide, index) => {
+        return <Carousel.Item key={index}>
             <img
                 className="d-block w-100"
                 src={slide.image.sourceUrl}
-                alt="First slide"
+                alt="Slide"
             />
             <Carousel.Caption className={cl.caption}>
                 <div className={cl.decor}>
-                    <img src={decor} />
+                    <img src={decor} alt="decor" />
                     <p className={cl.decortext}>{slide.title}</p>
                 </div>
 
@@ -41,7 +54,7 @@ const Slider = (props) => {
 
     return (
         <div className={cl.carouselWrap}>
-            <Carousel prevIcon={<img src={left} alt="prev icon" />} nextIcon={<img src={right} alt="next icon" />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
+            <Carousel prevIcon={<ArrowLeft index={index} mainSliderArray={mainSliderArray} />} nextIcon={<img src={right} alt="next icon" />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
 
                 {mainSliderArray}
 
@@ -55,16 +68,16 @@ const Slider = (props) => {
                     </div>
                     <div className={cl.decorLine}></div>
                     <div className={cl.social}>
-                        <a href={props.facebook} target="_blank"> <img src={faceBook} alt="faceBook" /> </a>
-                        <a href={props.youtube} target="_blank"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
-                        <a href={props.instagram} target="_blank"> <img src={insta} alt="instagarm" /> </a>
+                        <a href={props.facebook} target="_blank" rel="noreferrer"> <img src={faceBook} alt="faceBook" /> </a>
+                        <a href={props.youtube} target="_blank" rel="noreferrer"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
+                        <a href={props.instagram} target="_blank" rel="noreferrer"> <img src={insta} alt="instagarm" /> </a>
                     </div>
 
                 </div>
 
             </div>
 
-            <div className={cl.index}>{index + 1}/{mainSliderArray.length}</div>
+            {/* <div className={cl.index}>{index + 1}/{mainSliderArray.length}</div> */}
         </div>
     )
 }

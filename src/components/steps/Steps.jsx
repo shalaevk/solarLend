@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import * as cl from './Steps.module.css'
@@ -33,7 +33,7 @@ export const Steps = ({ st }) => {
                             {st.stepblock.steptitleone}
                         </div>
                         <div className={cl.icon}>
-                            <img className="img-fluid" src={step1} alt="icon" loading="lazy" />
+                            <img className="img-fluid" src={step1} alt="Steps" loading="lazy" />
                         </div>
                         <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextone }} />
 
@@ -46,7 +46,7 @@ export const Steps = ({ st }) => {
                             {st.stepblock.steptitletwo}
                         </div>
                         <div className={cl.icon}>
-                            <img className="img-fluid" src={step2} alt="icon" loading="lazy" />
+                            <img className="img-fluid" src={step2} alt="Steps" loading="lazy" />
                         </div>
                         <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
 
@@ -60,7 +60,7 @@ export const Steps = ({ st }) => {
                             {st.stepblock.steptitlethree}
                         </div>
                         <div className={cl.icon}>
-                            <img className="img-fluid" src={step3} alt="icon" loading="lazy" />
+                            <img className="img-fluid" src={step3} alt="Steps" loading="lazy" />
                         </div>
                         <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextthree }} />
 
@@ -123,7 +123,7 @@ export const Steps = ({ st }) => {
                                 {st.stepblock.steptitleone}
                             </div>
                             <div className={cl.icon}>
-                                <img className="img-fluid" src={step1} alt="image" />
+                                <img className="img-fluid" src={step1} alt="Decor" />
                             </div>
                             <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextone }} />
 
@@ -136,7 +136,7 @@ export const Steps = ({ st }) => {
                                 {st.stepblock.steptitletwo}
                             </div>
                             <div className={cl.icon}>
-                                <img className="img-fluid" src={step2} alt="image" />
+                                <img className="img-fluid" src={step2} alt="Decor" />
                             </div>
                             <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
 
@@ -150,7 +150,7 @@ export const Steps = ({ st }) => {
                                 {st.stepblock.steptitlethree}
                             </div>
                             <div className={classNames(cl.icon, cl.notMargin)}>
-                                <img className="img-fluid" src={step3} alt="image" />
+                                <img className="img-fluid" src={step3} alt="Decor" />
                             </div>
                             <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptextthree }} />
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import * as cl from './Reviews.module.css'
@@ -17,14 +17,14 @@ export const Reviews = ({ rev, setLink, showModal }) => {
         setLink(link)
     }
 
-    let revArray = rev.rewblock.rewslide.map((slide) => {
-        return <div className={cl.sliderItemWrap}>
-            <img src={slide.rewimgone.sourceUrl} />
+    let revArray = rev.rewblock.rewslide.map((slide, index) => {
+        return <div key={index} className={cl.sliderItemWrap}>
+            <img src={slide.rewimgone.sourceUrl} alt={slide.rewtitleone} />
             <div className={cl.caption}>
-                <div className={cl.reviewIcon} onClick={() => { callAllFunctions(slide.rewvideo) }}>
-                    <img src={playBtn} alt="" />
+                <div className={cl.reviewIcon} role="button" onClick={() => { callAllFunctions(slide.rewvideo) }}>
+                    <img src={playBtn} alt={slide.rewtitleone} />
                 </div>
-                <p onClick={() => { callAllFunctions(slide.rewvideo) }}>{slide.rewtitleone}</p>
+                <p role="button" onClick={() => { callAllFunctions(slide.rewvideo) }}>{slide.rewtitleone}</p>
             </div>
 
         </div>

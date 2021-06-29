@@ -12,7 +12,7 @@ import { Reviews } from "../reviews/Reviews";
 import { Map } from "../map/Map";
 import { Modal } from "../objects/Modal";
 import { ReviewModal } from "../reviews/ReviewModal";
-import { Footer } from '../Footer';
+
 
 
 
@@ -51,7 +51,7 @@ const Homepage = ({ data }) => {
             ]
         }
     })
-    const [id, setId] = useState(0)
+    // const [id, setId] = useState(0)
 
     const [isOpenRew, setOpenRew] = useState(false)
     const [rewLink, steRewLink] = useState("")
