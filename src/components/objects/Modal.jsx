@@ -13,6 +13,7 @@ export const Modal = ({ objData, handleClose, show, children }) => {
 
     const [isOpen, setOpen] = useState(false)
     const [photoIndex, setIndex] = useState(0)
+    const [id, setId] = useState(0)
 
     const images = objData.solarObj.objimages.map((node) => {
         return node.sourceUrl
