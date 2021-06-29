@@ -369,8 +369,8 @@ template {
     z-index: 6;
     background: #fff;
     position: fixed;
-    -webkit-box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.77); 
-    box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.5); 
+    box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.5);
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0, 1);
