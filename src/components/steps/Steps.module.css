@@ -63,6 +63,14 @@
     margin-top: 70px;
 }
 
+.stepItem:first-child,
+.stepItem:nth-child(3){
+    list-style-image: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/minus.svg);
+}
+.stepItem:nth-child(2){
+    list-style-image: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/minusWhite.svg);
+}
+
 .notMargin{
     margin-top: 0px !important;
 }

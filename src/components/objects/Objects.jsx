@@ -56,7 +56,7 @@ export const Objects = (props) => {
 
     return (
         <ReactWOW>
-            <section className={classNames(cl.objectsWrap, "animate__animated animate__fadeInUp")}>
+            <section id="obj" className={classNames(cl.objectsWrap, "animate__animated animate__fadeInUp")}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title')}>
                         {props.lang === "uk" ? "Реалізовані об’єкти" : "Реализованные обЪекти"}

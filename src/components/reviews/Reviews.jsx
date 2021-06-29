@@ -32,7 +32,7 @@ export const Reviews = ({ rev, setLink, showModal }) => {
 
     return (
         <ReactWOW>
-            <section className={classNames('container animate__animated animate__fadeInUp', cl.revieWrap)}>
+            <section id="rev" className={classNames('container animate__animated animate__fadeInUp', cl.revieWrap)}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title')}>
                         {rev.rewtitle}

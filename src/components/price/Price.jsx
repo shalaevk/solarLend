@@ -10,7 +10,7 @@ export const Price = ({ pr, lang }) => {
 
     return (
         <ReactWOW>
-            <section className={classNames(cl.priceSection, "animate__animated animate__fadeInUp")}>
+            <section id="price" className={classNames(cl.priceSection, "animate__animated animate__fadeInUp")}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title')}>
                         {pr.pricetitle}

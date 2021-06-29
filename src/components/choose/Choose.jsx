@@ -15,7 +15,7 @@ export const Choose = (props) => {
 
     return (
         <ReactWOW>
-            <section className={classNames(cl.choose, "animate__animated animate__fadeInUp")}>
+            <section id="choose" className={classNames(cl.choose, "animate__animated animate__fadeInUp")}>
                 <div className={classNames('titleWrap', cl.titleWrap)}>
                     <div className={classNames('title', cl.title)} >
                         {props.ch.choosetitle}

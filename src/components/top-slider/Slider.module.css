@@ -32,6 +32,7 @@
     position: absolute;
     bottom: 4%;
     left: 11%;
+    font-weight: 200;
 }
 .mobBtn:hover{
     background: #fff !important;
@@ -40,7 +41,7 @@
 }
 .socWrap{
     position: absolute;
-    right: 0;
+    right: -3%;
     z-index: 2;
     transform: rotate(-90deg);
     bottom: 30%;

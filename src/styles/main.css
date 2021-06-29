@@ -543,6 +543,13 @@ text-align: left;
 .mobaddress{
     display: none;
 }
+.descAddr{
+    max-width: 350px;
+    white-space: normal;
+}
+
+
+
 @media (min-width: 1080px){
     .navbar-nav {
         margin-left: 3%;
@@ -731,8 +738,8 @@ text-align: left;
     }
     .mobaddress{
         display: flex;
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
     }
     .mobaddress img{
         width: 24px;
@@ -871,7 +878,7 @@ text-align: left;
 }
 .topSlider  .carousel-control-prev{
     top: auto;
-    padding-right: 40px;
+    padding-right: 20px;
 
 }
 .topSlider  .carousel-control-next{
@@ -1006,6 +1013,14 @@ text-align: left;
 .gm-style-pbc{
     display: none !important;
 }
+.lang .active{
+    color: #000 !important;
+}
+@media (min-width: 1525px)  {
+    .carousel-control-prev {
+        left: 20px;
+    }
+}
 @media (max-width: 1200px)  {
     .topSlider .carousel-control-next {
         left: 150px;
@@ -1085,6 +1100,7 @@ text-align: left;
  
     .topSlider  .carousel-control-prev{
         right: 100px;
+        padding-right: 60px;
     }
     .topSlider  .carousel-control-next{
         left: 100px

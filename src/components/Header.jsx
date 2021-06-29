@@ -101,6 +101,7 @@ export const Header = (props) => {
                         <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" />  {props.kiyvstar.title}</Dropdown.Item>
                         <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
                         <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>
+
                     </div>
 
 
@@ -123,6 +124,8 @@ export const Header = (props) => {
 
                         <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
                         <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>
+
+                        <div className="descAddr dropdown-item" > <img src={location} /> <span>{props.adress}</span> </div>
 
                         <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" /> {props.mail.title}</Dropdown.Item>
 

@@ -14,7 +14,7 @@ export const Steps = ({ st }) => {
 
     return (
         <ReactWOW>
-            <section className={classNames(cl.stepsWrap, "animate__animated animate__fadeInUp")}>
+            <section id="steps" className={classNames(cl.stepsWrap, "animate__animated animate__fadeInUp")}>
                 <div className='titleWrap'>
                     <div className={classNames('title')}>
                         {st.steptitle}

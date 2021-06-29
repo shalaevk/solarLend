@@ -64,7 +64,7 @@ const Slider = (props) => {
 
             </div>
 
-            <div className={cl.index}>{index + 1}/{2}</div>
+            <div className={cl.index}>{index + 1}/{4}</div>
         </div>
     )
 }
