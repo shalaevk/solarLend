@@ -18,7 +18,7 @@ import close from '../images/plus.svg'
 
 export const Header = (props) => {
 
-
+    const [pos, setPosition] = useState("")
 
     const [cls, setCls] = useState("");
 
@@ -29,15 +29,17 @@ export const Header = (props) => {
         else setCls("")
     }
 
-    return <Navbar expand="lg">
+    return <Navbar expand="lg" className={pos}>
         <Navbar.Brand as={Link} to="/"><img className="img-fluid logoImg" src={logo} alt="Logo" /></Navbar.Brand>
 
         <div className="mobphone">
             <Dropdown>
                 <div className="dropWrap phones">
-                    <Dropdown.Toggle className="phones" id="dropdown-basic">
+                    <Dropdown.Toggle className="phones" id="dropdown-basic" >
 
-                        <div className="secShadow">
+                        <div className="secShadow" onClick={() => {
+                            setPosition("statClass")
+                        }}>
                             <img className="phonecall" src={phonecall} />
                         </div>
 
@@ -50,7 +52,9 @@ export const Header = (props) => {
                 <Dropdown.Menu>
                     <Dropdown.Toggle className="phones phoneInside" id="dropdown-basic">
 
-                        <div className="clasePhwrap">
+                        <div className="clasePhwrap" onClick={() => {
+                            setPosition("")
+                        }}>
                             <img className="closePhone" src={close} />
                         </div>
 

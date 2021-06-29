@@ -366,8 +366,9 @@ template {
 .navbar{
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 6;
     background: #fff;
+    position: fixed;
 }
 
 
@@ -706,6 +707,7 @@ text-align: left;
         right: 0;
         width: 100vw;
         height: 100vh;
+        min-height: 400px;
         z-index: 1000;
         display: block;
         float: none;
@@ -1103,5 +1105,10 @@ text-align: left;
     .rew-modal {
         height: 42vh;
     }
-  
+    #dropdown-basic{
+        /* min-height: 380px; */
+    }
+  .statClass{
+      position: absolute !important;
+  }
 }
