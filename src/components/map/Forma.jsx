@@ -105,7 +105,7 @@ const ContactForm = (props) => {
             // this will reset messageSent and isSuccessMessage state
             setMessageSent(false)
             setIsSuccessMessage(false)
-        }, 3000);
+        }, 10000);
         // this effect function will be dispatched when isSuccessMessage or messageSent changes its state
     }, [isSuccessMessage, messageSent])
 
