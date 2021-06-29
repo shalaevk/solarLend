@@ -151,7 +151,7 @@ const ContactForm = (props) => {
                                     placeholder="E-mail*"
                                     onChange={handleChange}
                                     value={values.email}
-                                    required
+
                                 />
                             </div>
 

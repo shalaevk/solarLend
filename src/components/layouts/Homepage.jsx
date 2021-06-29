@@ -20,7 +20,7 @@ import { ReviewModal } from "../reviews/ReviewModal";
 
 const Homepage = ({ data }) => {
 
-    console.log(data.wpPage.acf.facebook)
+    // console.log(data.wpPage.acf.facebook)
 
     const [show, setState] = useState(false)
     const [objData, setObjData] = useState({
@@ -51,7 +51,7 @@ const Homepage = ({ data }) => {
             ]
         }
     })
-    // const [id, setId] = useState(0)
+    const [id, setId] = useState(0)
 
     const [isOpenRew, setOpenRew] = useState(false)
     const [rewLink, steRewLink] = useState("")
