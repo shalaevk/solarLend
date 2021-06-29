@@ -41,7 +41,7 @@ const Slider = (props) => {
 
     return (
         <div className={cl.carouselWrap}>
-            <Carousel prevIcon={<img src={left} />} nextIcon={<img src={right} />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
+            <Carousel prevIcon={<img src={left} alt="prev icon" />} nextIcon={<img src={right} alt="next icon" />} className="topSlider" activeIndex={index} onSelect={handleSelect}>
 
                 {mainSliderArray}
 
@@ -64,7 +64,7 @@ const Slider = (props) => {
 
             </div>
 
-            <div className={cl.index}>{index + 1}/{4}</div>
+            <div className={cl.index}>{index + 1}/{mainSliderArray.length}</div>
         </div>
     )
 }

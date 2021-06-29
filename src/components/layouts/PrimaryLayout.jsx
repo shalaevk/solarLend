@@ -23,7 +23,7 @@ const PrimaryLayout = (props) => {
 
 
     return <>
-        <Head />
+        <Head lang={props.lang} />
         <Header
             adress={props.adress}
             kiyvstar={props.kiyvstar}

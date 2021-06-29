@@ -54,7 +54,7 @@ export const Price = ({ pr, lang }) => {
                             </p>
                             <p className={cl.price}>{pr.priceblock.pricethree}</p>
                             <p className={cl.za}>за кВт</p>
-                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
+                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlethree}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>
@@ -67,7 +67,7 @@ export const Price = ({ pr, lang }) => {
                             </p>
                             <p className={cl.price}>{pr.priceblock.pricefour}</p>
                             <p className={cl.za}>за кВт</p>
-                            <p className={cl.priceTitle}>Сонячні електростанції гібридні</p>
+                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>

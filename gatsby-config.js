@@ -4,8 +4,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "solarLend",
-    script: "<script src='https://my.server.ru/jquery.min.js'></script>"
+    lang: "ru__Ru",
   },
   plugins: [
     {

@@ -370,7 +370,9 @@ template {
     background: #fff;
     position: fixed;
 }
-
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0, 1);
+}
 
 
 .navbar-nav{
@@ -590,6 +592,7 @@ text-align: left;
     .navbar-nav{
         text-align: center;
         margin-top: 32px;
+        padding-bottom: 40px;
     }
     .navbar-brand {
         max-width: 100% !important;
@@ -867,7 +870,9 @@ text-align: left;
 
 /* Modal Styles End */
 
-
+.carousel-indicators{
+    z-index: 2 !important;
+}
 .topSlider .carousel-indicators {
     left: 60%;
 }
@@ -884,7 +889,7 @@ text-align: left;
 .topSlider  .carousel-control-next{
     left: 150px;
     top: auto;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 .topSlider  .carousel-control-prev,
 .topSlider  .carousel-control-next{
