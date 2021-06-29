@@ -39,6 +39,7 @@ const ContactForm = (props) => {
     }, [])
 
     const [classActive, setClass] = useState('')
+    const [hideForm, sethideForm] = useState('')
 
     let setClassActive = () => {
 
@@ -110,7 +111,9 @@ const ContactForm = (props) => {
     return (
         <ReactWOW>
             <div id="conatctForm" className={classNames(cl.addressWrap, "animate__animated animate__fadeInRight")}>
-                <div className={cl.addressTop}>
+
+                <div className={classNames(cl.addressTop, hideForm)}>
+
                     <div className={cl.addrTitle}>
                         {props.lang === "uk" ? "Залишити заявку" : "Оставить заявку"}
                     </div>
@@ -148,7 +151,7 @@ const ContactForm = (props) => {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    placeholder="E-mail*"
+                                    placeholder="E-mail"
                                     onChange={handleChange}
                                     value={values.email}
 
@@ -166,19 +169,24 @@ const ContactForm = (props) => {
 
                             </button>
                         </div>
-                        {messageSent && isSuccessMessage && (
-                            <div>
-                                {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
-                            </div>
-                        )}
-                        {messageSent && !isSuccessMessage && (
-                            <div>
-                                something went wrong please try again.
-                            </div>
-                        )}
+
                     </form>
 
                 </div>
+
+                {messageSent && isSuccessMessage && (
+
+                    <div>
+                        {props.lang === "uk" ? "Дякуємо за звернення! Ваше повідомлення було успішно надіслано." : "Спасибо за обращение! Ваше сообщение было успешно отправлено."}
+
+                    </div>
+                )}
+                {messageSent && !isSuccessMessage && (
+                    <div>
+                        {props.lang === "uk" ? "Вибачте Ваше повідомлення не було надіслано. Спробуйте будьласка пiзнiше" : "Извините Ваше сообщение не было отправлено. Пожалуйста попробуйте позже"}
+                    </div>
+                )}
+
                 <div className={cl.addressBottom}>
                     <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
                     <div className={cl.phonesMobWrap}>
