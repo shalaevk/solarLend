@@ -67,6 +67,8 @@ export const Header = (props) => {
 
                     <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" /> {props.mail.title}</Dropdown.Item>
 
+                    <p className="descAddr text-center mt-2 dropdown-item">пн. - пт. 9:00 до 18:00</p>
+
                 </Dropdown.Menu>
             </Dropdown>
         </div>
