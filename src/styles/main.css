@@ -369,8 +369,8 @@ template {
     z-index: 6;
     background: #fff;
     position: fixed;
-    -webkit-box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.5); 
-    box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 18px -10px rgba(0,0,0,0.3);
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0, 1);
@@ -524,7 +524,8 @@ text-align: left;
 
 
 .lang a{
-    color:rgba(112, 112, 112, 0.5)
+    color:rgba(112, 112, 112, 0.5);
+    margin-right: 5px; 
 }
 .lang .active{
     font-weight: 400;
