@@ -553,8 +553,32 @@ text-align: left;
     white-space: normal;
 }
 
-
-
+.ril__navButtonNext {
+    background: rgba(0,0,0,.2) url(https://solarland.s-tet.top/wp-content/uploads/2021/06/open-arrow-left-2.svg) no-repeat 50% !important;
+    right: 0;
+    transform: rotate(180deg);
+}
+.ril__navButtonPrev {
+    background: rgba(0,0,0,.2) url(https://solarland.s-tet.top/wp-content/uploads/2021/06/open-arrow-left-2.svg) no-repeat 50% !important;
+    left: 0;
+   
+}
+.ril__closeButton {
+    background: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/close.svg) no-repeat center !important;
+    background-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 10px;
+}
+.ril__zoomInButton {
+    background: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/zoom-in.svg) no-repeat center !important;
+    background-size: 20px !important;
+}
+.ril__zoomOutButton {
+    background: url(https://solarland.s-tet.top/wp-content/uploads/2021/06/zoom-out.svg) no-repeat center !important;
+    transform: rotateY(-180deg);
+    background-size: 20px !important;
+}
 @media (min-width: 1080px){
     .navbar-nav {
         margin-left: 3%;
