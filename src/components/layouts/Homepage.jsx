@@ -12,9 +12,9 @@ import { Reviews } from "../reviews/Reviews";
 import { Map } from "../map/Map";
 import { Modal } from "../objects/Modal";
 import { ReviewModal } from "../reviews/ReviewModal";
-import Privacy from "../../pages/privacy-policy"
 
-import FooterModal from '../FooterModal'
+
+
 
 
 
