@@ -10,6 +10,7 @@ const Head = (props) => {
         }}>
             <meta charSet="utf-8" />
             <title>Solar Lend</title>
+
         </Helmet>
     )
 }

@@ -33,6 +33,7 @@ const Slider = (props) => {
                 className="d-block w-100"
                 src={slide.image.sourceUrl}
                 alt="Slide"
+                loading="lazy"
             />
             <Carousel.Caption className={cl.caption}>
                 <div className={cl.decor}>
@@ -68,9 +69,9 @@ const Slider = (props) => {
                     </div>
                     <div className={cl.decorLine}></div>
                     <div className={cl.social}>
-                        <a href={props.facebook} target="_blank" rel="noreferrer"> <img src={faceBook} alt="faceBook" /> </a>
-                        <a href={props.youtube} target="_blank" rel="noreferrer"> <img className={cl.you} src={youTube} alt="youtube" /> </a>
-                        <a href={props.instagram} target="_blank" rel="noreferrer"> <img src={insta} alt="instagarm" /> </a>
+                        <a href={props.facebook} target="_blank" rel="noreferrer"> <img src={faceBook} alt="faceBook" loading="lazy" /> </a>
+                        <a href={props.youtube} target="_blank" rel="noreferrer"> <img className={cl.you} src={youTube} alt="youtube" loading="lazy" /> </a>
+                        <a href={props.instagram} target="_blank" rel="noreferrer"> <img src={insta} alt="instagarm" loading="lazy" /> </a>
                     </div>
 
                 </div>

@@ -48,7 +48,7 @@ export const Header = (props) => {
     }
 
     return <Navbar expanded={expanded} expand="lg" className={pos}>
-        <Navbar.Brand as={Link} to="/"><img className="img-fluid logoImg" src={logo} alt="Logo" /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img className="img-fluid logoImg" src={logo} alt="Logo" loading="lazy" /></Navbar.Brand>
 
         <div className="mobphone">
             <Dropdown>
@@ -77,13 +77,13 @@ export const Header = (props) => {
                         </div>
 
                     </Dropdown.Toggle>
-                    <Dropdown.Item className=" mobview phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" />  {props.kiyvstar.title}</Dropdown.Item>
-                    <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
-                    <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>
+                    <Dropdown.Item className=" mobview phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" />  {props.kiyvstar.title}</Dropdown.Item>
+                    <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="vodaphone" loading="lazy" />  {props.vodafone.title}</Dropdown.Item>
+                    <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" loading="lazy" /> {props.life.title}</Dropdown.Item>
 
-                    <div className="mobaddress dropdown-item" > <img src={location} /> <span>{props.adress}</span> </div>
+                    <div className="mobaddress dropdown-item" > <img src={location} loading="lazy" /> <span>{props.adress}</span> </div>
 
-                    <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" /> {props.mail.title}</Dropdown.Item>
+                    <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" loading="lazy" /> {props.mail.title}</Dropdown.Item>
 
                     <p className="descAddr text-center mt-2 dropdown-item">пн. - пт. 9:00 до 18:00</p>
 
@@ -118,9 +118,9 @@ export const Header = (props) => {
 
                 <div className="mobSocialWrap">
                     <div className="phonesMenuWrap">
-                        <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" />  {props.kiyvstar.title}</Dropdown.Item>
-                        <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
-                        <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" />  {props.kiyvstar.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" loading="lazy" />  {props.vodafone.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" loading="lazy" /> {props.life.title}</Dropdown.Item>
 
                     </div>
 
@@ -141,14 +141,14 @@ export const Header = (props) => {
 
 
                     <Dropdown.Menu>
-                        <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" /> {props.kiyvstar.title}</Dropdown.Item>
-                        <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" />  {props.vodafone.title}</Dropdown.Item>
-                        <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" /> {props.life.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" /> {props.kiyvstar.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" loading="lazy" />  {props.vodafone.title}</Dropdown.Item>
+                        <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" loading="lazy" /> {props.life.title}</Dropdown.Item>
 
 
-                        <div className="descAddr dropdown-item" > <img src={location} /> <span>{props.adress}</span> </div>
+                        <div className="descAddr dropdown-item" > <img src={location} loading="lazy" /> <span>{props.adress}</span> </div>
 
-                        <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" /> {props.mail.title}</Dropdown.Item>
+                        <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" loading="lazy" /> {props.mail.title}</Dropdown.Item>
 
                         <p className="descAddr dropdown-item">пн. - пт. 9:00 до 18:00</p>
 

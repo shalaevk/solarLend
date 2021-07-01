@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { graphql } from "gatsby"
 import PrimaryLayout from "./PrimaryLayout";
 import Slider from "../top-slider/Slider";
