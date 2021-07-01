@@ -33,7 +33,7 @@ const Slider = (props) => {
                 className="d-block w-100"
                 src={slide.image.sourceUrl}
                 alt="Slide"
-                loading="lazy"
+
             />
             <Carousel.Caption className={cl.caption}>
                 <div className={cl.decor}>
