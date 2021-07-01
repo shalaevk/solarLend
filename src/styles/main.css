@@ -855,6 +855,12 @@ text-align: left;
 .closebtn img{
     max-width: 17px;
 }
+.prPolicy{
+    cursor: pointer;
+}
+.prPolicy:hover{
+    text-decoration: underline;
+}
 
 /* Policy modal */
 
