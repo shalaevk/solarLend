@@ -13,7 +13,12 @@ import insta from '../images/instagram.svg'
 
 
 
+
+
 export const Footer = (props) => {
+
+   console.log(props)
+
    return <footer className={cl.footer}>
       <div className={cl.logo}>
          <img src={logo} />
@@ -41,7 +46,7 @@ export const Footer = (props) => {
          </div>
          <div className={cl.copyRight}>
             <p>© 2021 Solarland. {props.lang === "uk" ? "Усі права захищенні" : "Все права защищены:"} </p>
-            <p>{props.lang === "uk" ? "Політика конфіденційності" : "Политика конфиденциальности"}</p>
+            <p>{props.lang === "uk" ? <span onClick={props.showModal}> Політика конфіденційності</span> : <span onClick={props.showModal}> Политика конфиденциальности</span>}</p>
          </div>
       </div>
    </footer>

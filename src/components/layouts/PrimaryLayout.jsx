@@ -5,10 +5,18 @@ import { Link } from "gatsby";
 import { Header } from "../Header"
 import { Footer } from "../Footer"
 import Head from "../Head"
-
+import { FooterModal } from '../FooterModal'
 
 const PrimaryLayout = (props) => {
 
+    const [show, setState] = useState(false)
+
+    let showModal = () => {
+        setState(true)
+    }
+    let hideModal = () => {
+        setState(false)
+    }
 
 
     let headerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu-ua' || edge.node.slug === 'main-menu-ru')
@@ -34,12 +42,15 @@ const PrimaryLayout = (props) => {
         />
         {props.children}
         <Footer
+
             lang={props.lang}
             facebook={props.facebook}
             youtube={props.youtube}
             instagram={props.instagram}
             menu={footerMenuArr}
+            showModal={showModal}
         />
+        <FooterModal handleClose={hideModal} text={props.text} show={show} />
     </>
 }
 

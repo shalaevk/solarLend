@@ -820,6 +820,45 @@ text-align: left;
 
 
 
+/* Policy modal */
+.modal-main{
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 80vh;
+    height: 80vh;
+    background-color: #fff;
+    padding: 30px;
+}
+.privTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.closebtn img{
+    max-width: 17px;
+}
+
+/* Policy modal */
+
+
 
 
 /*Title style*/

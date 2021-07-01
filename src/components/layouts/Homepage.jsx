@@ -12,6 +12,9 @@ import { Reviews } from "../reviews/Reviews";
 import { Map } from "../map/Map";
 import { Modal } from "../objects/Modal";
 import { ReviewModal } from "../reviews/ReviewModal";
+import Privacy from "../../pages/privacy-policy"
+
+import FooterModal from '../FooterModal'
 
 
 
@@ -87,7 +90,7 @@ const Homepage = ({ data }) => {
     return (
 
         <PrimaryLayout
-
+            text={data.wpPage.acf.privacytext}
             facebook={data.wpPage.acf.facebook}
             youtube={data.wpPage.acf.youtube}
             instagram={data.wpPage.acf.instagram}
@@ -119,6 +122,7 @@ const Homepage = ({ data }) => {
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
                 <Map lang={data.wpPage.locale.locale} />
             </div>
+
         </PrimaryLayout>
 
     )
@@ -170,6 +174,7 @@ export const query = graphql`
                 youtube
                 instagram
                 adress
+                privacytext
                 kiyvstar {
                     title
                     url
