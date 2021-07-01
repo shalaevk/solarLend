@@ -120,7 +120,7 @@ const Homepage = ({ data }) => {
                 <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                 <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
-                <Map lang={data.wpPage.locale.locale} />
+                {/* <Map lang={data.wpPage.locale.locale} /> */}
             </div>
 
         </PrimaryLayout>
