@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 const Head = (props) => {
     let lang = props.lang;
-    console.log(lang)
+    // console.log(lang)
     return (
         <Helmet htmlAttributes={{
             lang: `${lang}`,

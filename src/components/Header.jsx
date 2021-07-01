@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 import { Navbar, Nav, Button, Dropdown } from 'react-bootstrap';
 import classNames from "classnames";
@@ -18,6 +18,24 @@ import close from '../images/plus.svg'
 
 export const Header = (props) => {
 
+    const menu = props.headerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
+        return <Nav.Link key={index} onClick={() => setExpanded(false)} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
+    })
+
+
+    const [expanded, setExpanded] = useState(false);
+
+    const navbarRef = useRef(null);
+
+    const onButtonClick = () => {
+        console.log(5)
+
+    };
+
+
+
+
+
     const [pos, setPosition] = useState("")
 
     const [cls, setCls] = useState("");
@@ -29,7 +47,7 @@ export const Header = (props) => {
         else setCls("")
     }
 
-    return <Navbar expand="lg" className={pos}>
+    return <Navbar expanded={expanded} expand="lg" className={pos}>
         <Navbar.Brand as={Link} to="/"><img className="img-fluid logoImg" src={logo} alt="Logo" /></Navbar.Brand>
 
         <div className="mobphone">
@@ -74,7 +92,7 @@ export const Header = (props) => {
         </div>
 
 
-        <Navbar.Toggle onClick={setClass} aria-controls="basic-navbar-nav">
+        <Navbar.Toggle onClick={setClass} onClick={() => setExpanded(expanded ? false : "expanded")} ref={navbarRef} aria-controls="basic-navbar-nav">
 
             <div className={classNames("headertopnav", cls)}>
                 <div className="headertopnavbtn">
@@ -96,7 +114,7 @@ export const Header = (props) => {
 
                 </div>
 
-                {props.menu}
+                {menu}
 
                 <div className="mobSocialWrap">
                     <div className="phonesMenuWrap">
