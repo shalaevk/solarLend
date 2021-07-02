@@ -21,8 +21,8 @@ export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
     })
 
     let closeFunc = () => {
-        handleClose()
-        delBodyClassFunc()
+        handleClose();
+        delBodyClassFunc();
 
     }
 
