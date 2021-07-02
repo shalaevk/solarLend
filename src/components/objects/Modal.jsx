@@ -22,7 +22,7 @@ export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
 
     let closeFunc = () => {
         handleClose();
-        delBodyClassFunc();
+        delBodyClassFunc()
 
     }
 

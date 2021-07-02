@@ -15,7 +15,7 @@ import ReactWOW from 'react-wow';
 export const Objects = (props) => {
 
     let callAllFunctions = (content) => {
-        props.showModal()
+        props.showModal();
         props.setModalData(content)
         props.setBodyClassFunc()
     }

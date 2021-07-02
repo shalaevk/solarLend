@@ -78,7 +78,7 @@ const Homepage = ({ data }) => {
         setBodyClass("overflow-hidden")
     }
     let delBodyClassFunc = () => {
-        setBodyClass("")
+        setBodyClass("");
     }
 
 
