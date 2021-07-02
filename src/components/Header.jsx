@@ -19,7 +19,10 @@ import close from '../images/plus.svg'
 export const Header = (props) => {
 
     const menu = props.headerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
-        return <Nav.Link key={index} onClick={() => setExpanded(false)} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
+        return <Nav.Link key={index} onClick={() => {
+            setExpanded(false)
+            setClass()
+        }} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
     })
 
 
@@ -85,14 +88,17 @@ export const Header = (props) => {
 
                     <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" loading="lazy" /> {props.mail.title}</Dropdown.Item>
 
-                    <p className="descAddr text-center mt-2 dropdown-item">пн. - пт. 9:00 до 18:00</p>
+                    <p className="descAddr text-center mt-2 dropdown-item">{props.lang === "uk" ? "пн. - пт. з 9:00 до 18:00" : "пн. - пт. c 9:00 до 18:00"}</p>
 
                 </Dropdown.Menu>
             </Dropdown>
         </div>
 
 
-        <Navbar.Toggle onClick={setClass} onClick={() => setExpanded(expanded ? false : "expanded")} ref={navbarRef} aria-controls="basic-navbar-nav">
+        <Navbar.Toggle onClick={() => {
+            setExpanded(expanded ? false : "expanded")
+            setClass()
+        }} ref={navbarRef} aria-controls="basic-navbar-nav">
 
             <div className={classNames("headertopnav", cls)}>
                 <div className="headertopnavbtn">
@@ -109,9 +115,8 @@ export const Header = (props) => {
             <Nav className="m-left-auto nav-wrapper">
 
                 <div className="lang mobLang">
-                    <Link activeClassName="active" to="/"> UA </Link>
-                    <Link activeClassName="active" to="/ru"> RU </Link>
-
+                    <Link activeClassName="active" to="/"> RU </Link>
+                    <Link activeClassName="active" to="/uk"> UA </Link>
                 </div>
 
                 {menu}
@@ -150,13 +155,14 @@ export const Header = (props) => {
 
                         <Dropdown.Item className="mailLink" href={props.mail.url}> <img src={mail} alt="mail" loading="lazy" /> {props.mail.title}</Dropdown.Item>
 
-                        <p className="descAddr dropdown-item">пн. - пт. 9:00 до 18:00</p>
+                        <p className="descAddr dropdown-item"> {props.lang === "uk" ? "пн. - пт. з 9:00 до 18:00" : "пн. - пт. c 9:00 до 18:00"} </p>
 
                     </Dropdown.Menu>
                 </Dropdown>
                 <div className="lang descLang">
-                    <Link activeClassName="active" to="/"> UA </Link>
-                    <Link activeClassName="active" to="/ru"> RU </Link>
+
+                    <Link activeClassName="active" to="/"> RU </Link>
+                    <Link activeClassName="active" to="/uk"> UA </Link>
 
                 </div>
                 <a href='#conatctForm' className={'pop headerPop'}>

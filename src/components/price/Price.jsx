@@ -82,7 +82,7 @@ export const Price = ({ pr, lang }) => {
                     <Carousel
                         additionalTransfrom={0}
                         arrows
-                        autoPlaySpeed={3000}
+                        // autoPlaySpeed={3000}
                         centerMode={false}
                         className={cl.objSlider}
                         containerClass="slidercontainer"
@@ -132,7 +132,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.price}>{pr.priceblock.priceone}</p>
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitleone}</p>
-                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
                             <div className={cl.decor}></div>
                             <p className={cl.text}>{pr.priceblock.pricetextone}</p>
                         </div>
@@ -141,7 +141,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.price}>{pr.priceblock.pricetwo}</p>
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitletwo}</p>
-                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
                             <div className={cl.decor}></div>
                             <p className={cl.text}>{pr.priceblock.pricetexttwo}</p>
                         </div>
@@ -149,8 +149,8 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.vid}>Від</p>
                             <p className={cl.price}>{pr.priceblock.pricethree}</p>
                             <p className={cl.za}>за кВт</p>
-                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
-                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlethree}</p>
+                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
                             <div className={cl.decor}></div>
                             <p className={cl.text}>{pr.priceblock.pricetextthree}</p>
                         </div>
@@ -158,8 +158,8 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.vid}>Від</p>
                             <p className={cl.price}>{pr.priceblock.pricefour}</p>
                             <p className={cl.za}>за кВт</p>
-                            <p className={cl.priceTitle}>Сонячні електростанції гібридні</p>
-                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>Замовити</a>
+                            <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
+                            <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
                             <div className={cl.decor}></div>
                             <p className={cl.text}>{pr.priceblock.pricetextfour}</p>
                         </div>

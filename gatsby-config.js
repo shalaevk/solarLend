@@ -5,6 +5,7 @@
 module.exports = {
   siteMetadata: {
     lang: "ru__Ru",
+
   },
   plugins: [
     {
@@ -21,8 +22,9 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src`,
         name: `images`,
-        path: `${__dirname}/src/images`
-      },
+        path: `${__dirname}/src/images`,
+
+      }
     },
 
 

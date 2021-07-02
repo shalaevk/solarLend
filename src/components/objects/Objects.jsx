@@ -10,26 +10,6 @@ import ReactWOW from 'react-wow';
 
 
 
-// const CustomRightArrow = ({ onClick, ...rest }) => {
-//     const {
-//         onMove,
-//         carouselState: { currentSlide, deviceType }
-//     } = rest;
-//     // onMove means if dragging or swiping in progress.
-//     return <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()} >
-//         <img src={left} alt="left arrow" />
-//     </button>;
-// };
-// const CustomLeftArrow = ({ onClick, ...rest }) => {
-//     const {
-//         onMove,
-//         carouselState: { currentSlide, deviceType }
-//     } = rest;
-//     // onMove means if dragging or swiping in progress.
-//     return <button className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()} >
-//         <img src={left} alt="left arrow" />
-//     </button>;
-// };
 
 
 export const Objects = (props) => {
@@ -47,7 +27,7 @@ export const Objects = (props) => {
             <div className={cl.caption}>
                 <p>{item.node.title}</p>
                 <a href="#contactForm" onClick={() => { callAllFunctions(item.node) }} className={classNames(cl.sliderBtn, 'pop')}>
-                    {props.lang === "uk" ? "Детальніше" : "Подробнее"}
+                    {props.lang === "uk" ? "Детальніше" : "Детальнее"}
                 </a>
             </div>
         </div>

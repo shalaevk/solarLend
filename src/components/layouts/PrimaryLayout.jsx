@@ -20,13 +20,10 @@ const PrimaryLayout = (props) => {
 
 
     let headerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu-ua' || edge.node.slug === 'main-menu-ru')
-    let footerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu-ua' || edge.node.slug === 'main-menu-ru')
+    // let footerMenu = props.menu.edges.filter((edge) => edge.node.slug === 'main-menu-ua' || edge.node.slug === 'main-menu-ru')
 
 
 
-    const footerMenuArr = footerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
-        return <Nav.Link key={index} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
-    })
 
 
     return <>
@@ -47,7 +44,7 @@ const PrimaryLayout = (props) => {
             facebook={props.facebook}
             youtube={props.youtube}
             instagram={props.instagram}
-            menu={footerMenuArr}
+            headerMenu={headerMenu}
             showModal={showModal}
         />
         <FooterModal handleClose={hideModal} text={props.text} show={show} />

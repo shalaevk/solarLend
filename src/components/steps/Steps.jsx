@@ -70,7 +70,7 @@ export const Steps = ({ st }) => {
                     <Carousel
                         additionalTransfrom={0}
                         arrows={true}
-                        autoPlaySpeed={3000}
+                        // autoPlaySpeed={3000}
                         centerMode={false}
                         className={cl.objSlider}
                         containerClass="slidercontainer"

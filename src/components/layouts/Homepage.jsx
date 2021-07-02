@@ -23,7 +23,8 @@ import { ReviewModal } from "../reviews/ReviewModal";
 
 const Homepage = ({ data }) => {
 
-    // console.log(data.wpPage.acf.facebook)
+    console.log(data)
+
 
     const [show, setState] = useState(false)
     const [objData, setObjData] = useState({

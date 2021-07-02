@@ -13,6 +13,8 @@ import life from '../../images/life.svg'
 import mail from '../../images/Message.svg'
 import check from '../../images/checkgreen.svg'
 
+import InputMask from 'react-input-mask';
+
 
 const ContactForm = (props) => {
     const WEBSITE_URL = 'https://solarland.s-tet.top';
@@ -111,7 +113,7 @@ const ContactForm = (props) => {
 
     return (
         <ReactWOW>
-            <div id="conatctForm" className={classNames(cl.addressWrap, "animate__animated animate__fadeInRight")}>
+            <div className={classNames(cl.addressWrap, "animate__animated animate__fadeInRight")}>
 
 
 
@@ -126,7 +128,7 @@ const ContactForm = (props) => {
                             {props.lang === "uk" ? "Заявка прийнята" : "Заявка принята"}
                         </div>
                         <div className={cl.thanktext}>
-                            {props.lang === "uk" ? "Спасибі, ми зв’яжемося з вами найближчим часом." : "Спасибо, мы свяжемся с вами в ближайшее время."}
+                            {props.lang === "uk" ? "Спасибі, ми зв'яжемося з Вами найближчим часом!" : "Спасибо, мы свяжемся с вами в ближайшее время!"}
                         </div>
 
                     </div>
@@ -154,7 +156,7 @@ const ContactForm = (props) => {
                                     </div>
                                     <div className={classNames(cl.inputWrap, 'inputWrap')}>
 
-                                        <input
+                                        <InputMask
                                             id="phone"
                                             name="phone"
                                             type="phone"
@@ -162,6 +164,7 @@ const ContactForm = (props) => {
                                             onChange={handleChange}
                                             value={values.number}
                                             required
+                                            mask="+38 (999) 999 9999"
                                         />
                                     </div>
                                     <div className={classNames(cl.inputWrap, 'inputWrap')}>
@@ -190,6 +193,7 @@ const ContactForm = (props) => {
                                 </div>
 
                             </form>
+                            <div id="address" ></div>
 
                         </div>
                     )}
@@ -200,7 +204,11 @@ const ContactForm = (props) => {
                 )}
 
                 <div className={cl.addressBottom}>
-                    <p className={cl.addr}><img src={location} alt="" /> м. Київ, вулиця Володимира Сосюри, 6, офіс 219</p>
+                    <p className={cl.addr}><img src={location} alt="" />
+                        {props.lang === "uk" ? "м. Київ, вулиця Володимира Сосюри, 6, офіс 219" : "Киев, улица Владимира Сосюры, 6, офис 219"}
+
+
+                    </p>
                     <div className={cl.phonesMobWrap}>
 
                         <p className={cl.phone}><img src={kiyvstar} alt="" /><a href="tel:+380677839000">+38 (067) 783-90-00</a></p>
@@ -210,7 +218,9 @@ const ContactForm = (props) => {
                     </div>
 
                     <p className={cl.mail}><img src={mail} alt="" /><a href="mailto:office@solarland.com.ua">  office@solarland.com.ua</a></p>
-                    <p className={cl.schedule}>пн. - пт. 9:00 до 18:00</p>
+                    <p className={cl.schedule}>
+                        {props.lang === "uk" ? "пн. - пт. з 9:00 до 18:00" : "пн. - пт. c 9:00 до 18:00"}
+                    </p>
                 </div>
             </div>
         </ReactWOW>

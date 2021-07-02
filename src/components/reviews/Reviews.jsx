@@ -93,6 +93,7 @@ export const Reviews = ({ rev, setLink, showModal }) => {
 
                 </Carousel>
             </section>
+            <div id="conatctForm"></div>
         </ReactWOW>
     )
 }

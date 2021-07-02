@@ -2,16 +2,17 @@ const path = require(`path`)
 const languages = [
     {
         path: "/",
-        code: "uk",
-        language: "uk"
-
-    },
-    {
-        path: "/ru",
         code: "ru",
         language: "ru_RU"
 
     },
+    {
+        path: "/uk",
+        code: "uk",
+        language: "uk"
+
+    },
+
 ]
 exports.createPages = async ({ actions: { createPage } }) => {
     const HomepageTemplate = path.resolve("./src/components/layouts/Homepage.jsx")

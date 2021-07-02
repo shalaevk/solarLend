@@ -42,7 +42,7 @@ const Slider = (props) => {
                 </div>
 
                 <p className={cl.text}>{slide.subtitle}</p>
-                <a href='#conatctForm' className={classNames('pop', cl.mobBtn)}>Отримати консультацію</a>
+                <a href='#conatctForm' className={classNames('pop', cl.mobBtn)}> {props.lang === "uk" ? "Отримати консультацію" : "Получить консультацию!"}</a>
             </Carousel.Caption>
         </Carousel.Item>
     })
@@ -65,7 +65,7 @@ const Slider = (props) => {
                 <div className={classNames(cl.socialWrap)}>
 
                     <div className={cl.textLink}>
-                        {props.lang === "uk" ? "Приєднуйся" : "Присоединяйся"}
+                        {props.lang === "uk" ? "Приєднуйся" : "Подпишись"}
                     </div>
                     <div className={cl.decorLine}></div>
                     <div className={cl.social}>

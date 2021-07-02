@@ -23,6 +23,15 @@ export const Map = (props) => {
             disableDefaultUI: true,
             mapTypeControl: false,
             streetViewControl: false,
+            zoomControlOptions: {
+                position: maps.ControlPosition.RIGHT_CENTER,
+                style: maps.ZoomControlStyle.SMALL
+            },
+            mapTypeControlOptions: {
+                position: maps.ControlPosition.TOP_RIGHT
+            },
+            mapTypeControl: true,
+
             styles: [
                 {
                     "elementType": "geometry",
@@ -187,8 +196,19 @@ export const Map = (props) => {
 
     }
 
+
+
+    // next props are exposed at maps
+    // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
+    // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
+    // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
+    // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
+    // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
+
+
     const [center, setCenter] = useState({ lat: 50.4422373, lng: 30.6470394 });
-    const [marker, setMarker] = useState({ lat: 50.4423671, lng: 30.6301307 });
+
+    const [marker, setMarker] = useState({ lat: 50.4412277, lng: 30.628249 });
     const [zoom, setZoom] = useState(14);
 
     useEffect(() => {
@@ -206,6 +226,7 @@ export const Map = (props) => {
                 bootstrapURLKeys={{ key: 'AIzaSyDF4UZiDOJ6Ptxa50DTydIqLT6iEsePnYc' }}
                 defaultCenter={center}
                 defaultZoom={zoom}
+                // yesIWantToUseGoogleMapApiInternals
                 options={getMapOptions}
             >
                 <AnyReactComponent

@@ -17,7 +17,13 @@ import insta from '../images/instagram.svg'
 
 export const Footer = (props) => {
 
-   console.log(props)
+
+
+   const menu = props.headerMenu[0].node.menuItems.nodes.map((menuItem, index) => {
+      return <Nav.Link key={index} as={Link} to={menuItem.path}>{menuItem.label}</Nav.Link>
+   })
+
+
 
    return <footer className={cl.footer}>
       <div className={cl.logo}>
@@ -25,12 +31,12 @@ export const Footer = (props) => {
       </div>
       <div className={cl.footerMiddle}>
          <div className={cl.footerMiddleLeft}>
-            {props.menu}
+            {menu}
          </div>
          <div className={cl.footerMiddleRight}>
             <img className={cl.decor} src={decor} alt="decor" />
             <div className={cl.footerText}>
-               {props.lang === "uk" ? "Приєднуйся до соціальних мереж" : "Присоединяйся к социальным сетям"}
+               {props.lang === "uk" ? "Приєднуйся до соціальних мереж" : "Подпишись на социальные сети"}
             </div>
             <div className={cl.decorLine}></div>
             <div className={cl.social}>
