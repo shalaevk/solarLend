@@ -1270,6 +1270,12 @@ text-align: left;
     .modal-main{
         width: 90%;
     }
+    .mod{
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        max-height: 100%;
+    }
     .rew-modal {
         height: 42vh;
     }

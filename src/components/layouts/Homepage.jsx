@@ -12,7 +12,7 @@ import { Reviews } from "../reviews/Reviews";
 import { Map } from "../map/Map";
 import { Modal } from "../objects/Modal";
 import { ReviewModal } from "../reviews/ReviewModal";
-
+import BodyClassName from 'react-body-classname';
 
 
 
@@ -23,10 +23,13 @@ import { ReviewModal } from "../reviews/ReviewModal";
 
 const Homepage = ({ data }) => {
 
-    console.log(data)
 
+
+
+    const [bodyClass, setBodyClass] = useState("")
 
     const [show, setState] = useState(false)
+
     const [objData, setObjData] = useState({
         "title": "МЕРЕЖЕВА СОНЯЧНА ЕЛЕКТРОСТАНЦІЯ З ТОНКОПЛІВКОВИМИ ПАНЕЛЯМИ В С. ІВАНКОВИЧІ, КИЇВСЬКА ОБЛАСТЬ",
         "content": "<p>Адреса об’єкту: с. Рославичи, Киевская область<br />\nПеріод монтажу: Ноябрь 2019<br />\nТерміни виконання: 3 рабочих дня<br />\nПотужність по інверторам: 30 кВт<br />\nВстановлення потужність панелей (PV)<br />\nОрієнтація: Юг<br />\nМережевий інвертор: Huawei SUN2000-33KTL-A<br />\nСонячні батареї: 28 шт. JA Solar JAM60S10-340/MR HalfCells Mono<br />\nСистеми кріплення: PRONT</p>\n",
@@ -71,7 +74,12 @@ const Homepage = ({ data }) => {
     let hideModalRew = () => {
         setOpenRew(false)
     }
-
+    let setBodyClassFunc = () => {
+        setBodyClass("overflow-hidden")
+    }
+    let delBodyClassFunc = () => {
+        setBodyClass("")
+    }
 
 
 
@@ -104,6 +112,7 @@ const Homepage = ({ data }) => {
             menu={data.allWpMenu}
             lang={data.wpPage.locale.locale}
         >
+            <BodyClassName className={bodyClass}>
             <div className='container-fluid'>
                 <Slider
                     lang={data.wpPage.locale.locale}
@@ -116,14 +125,14 @@ const Homepage = ({ data }) => {
                 <Choose ch={data.wpPage.acf} />
 
                 <Steps st={data.wpPage.acf} />
-                <Objects lang={data.wpPage.locale.locale} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
-                <Modal handleClose={hideModal} objData={objData} show={show} />
+                <Objects lang={data.wpPage.locale.locale} setBodyClassFunc={setBodyClassFunc} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
+                <Modal handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
                 <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                 <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                 <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
                 <Map lang={data.wpPage.locale.locale} />
             </div>
-
+            </BodyClassName>
         </PrimaryLayout>
 
     )

@@ -9,11 +9,7 @@ import 'react-image-lightbox/style.css'
 
 
 
-export const Modal = ({ objData, handleClose, show, children }) => {
-    const fixed = useRef(null);
-    const modalFix = fixed.current;
-
-
+export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
 
 
     const [isOpen, setOpen] = useState(false)
@@ -24,6 +20,11 @@ export const Modal = ({ objData, handleClose, show, children }) => {
         return node.sourceUrl
     })
 
+    let closeFunc = () => {
+        handleClose()
+        delBodyClassFunc()
+
+    }
 
     let objImages = null;
     let arrayObjImages = null;
@@ -40,9 +41,11 @@ export const Modal = ({ objData, handleClose, show, children }) => {
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
     if (show && objData != {}) {
-        return (<div className={showHideClassName}>
-            <section ref={fixed} onTouchMove={(e)=>{e.preventDefault()}} className='modal-main mod'>
-                <div onClick={handleClose} className={cl.closebtn}>
+        return (<div onTouchMove={(e)=>{
+            e.preventDefault()
+        }} className={showHideClassName}>
+            <section  className='modal-main mod'>
+                <div onClick={closeFunc} className={cl.closebtn}>
                     <img src={close} alt="close button" />
                 </div>
                 <div className={cl.contentWrap}>
