@@ -952,7 +952,7 @@ text-align: left;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    z-index: 1020;
 }
 
 .modal-main {
@@ -1018,7 +1018,7 @@ text-align: left;
 .topSlider  .carousel-control-next{
     opacity: 1;
     
-    z-index: 10;
+    z-index: 1;
 }
 .topSlider  .carousel-control-prev{
     display: flex;
@@ -1278,5 +1278,9 @@ text-align: left;
     }
   .statClass{
       position: absolute !important;
+  }
+  .rew-modal{
+      padding: 0;
+      background-color: transparent;
   }
 }

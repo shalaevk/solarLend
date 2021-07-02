@@ -16,7 +16,7 @@ const Head = (props) => {
             <meta charSet="utf-8" />
             <title>{lang === "uk" ? "Сонячні електростанції в Україні | Solarland" : "Солнечные электростанции в Украине | Solarland"}</title>
             <link rel="icon" href={favicon} />
-            <meta name="description" content={lang === "uk" ? "Сонячні електростанції в Україні | Solarland" : "Солнечные электростанции в Украине | Solarland"} />
+            <meta name="description" content={lang === "uk" ? "Сонячні електростанції в Україні" : "Солнечные электростанции в Украине"} />
             <meta name="image" content={logo} />
         </Helmet>
     )

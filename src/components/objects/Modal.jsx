@@ -10,6 +10,11 @@ import 'react-image-lightbox/style.css'
 
 
 export const Modal = ({ objData, handleClose, show, children }) => {
+    const fixed = useRef(null);
+    const modalFix = fixed.current;
+
+
+
 
     const [isOpen, setOpen] = useState(false)
     const [photoIndex, setIndex] = useState(0)
@@ -36,7 +41,7 @@ export const Modal = ({ objData, handleClose, show, children }) => {
 
     if (show && objData != {}) {
         return (<div className={showHideClassName}>
-            <section className='modal-main'>
+            <section ref={fixed} onTouchMove={(e)=>{e.preventDefault()}} className='modal-main mod'>
                 <div onClick={handleClose} className={cl.closebtn}>
                     <img src={close} alt="close button" />
                 </div>

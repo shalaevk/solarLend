@@ -1,6 +1,6 @@
 .contentWrap{
     background: #fff;
-    height: 80vh;
+    /*height: 80vh;*/
     display: flex;
     /*padding: 40px;*/
     justify-content: space-between;
@@ -124,4 +124,8 @@
     font-size: 5vw;
     line-height: 6.5vw;
 }
+
+    .rightItem{
+        margin-bottom: 0px;
+    }
 }
