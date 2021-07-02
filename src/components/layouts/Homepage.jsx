@@ -147,7 +147,7 @@ export const query = graphql`
                 }
             }
         }
-        allWpPost(filter: {locale: {locale: {eq: $lang}}}) {
+        allWpPost(filter: {locale: {locale: {eq: $language}}}) {
             edges {
                 node {
                     title

@@ -1,10 +1,8 @@
 .contentWrap{
     background: #fff;
-    overflow: auto;
     height: 80vh;
-    overflow-y: auto;
     display: flex;
-    padding: 40px;
+    /*padding: 40px;*/
     justify-content: space-between;
 }
 .leftItem{
