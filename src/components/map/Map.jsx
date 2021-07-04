@@ -206,8 +206,8 @@ export const Map = (props) => {
 
     useEffect(() => {
         if (window.innerWidth < 768) {
-            setCenter({ lat: 50.4424081, lng: 30.6327593 })
-            setMarker("")
+            setCenter({ lat: 50.442367, lng: 30.632319 })
+            setMarker({ lat: 50.442367, lng: 30.632319 })
         }
 
     }, []);
