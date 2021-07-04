@@ -464,6 +464,9 @@ template {
     border-left: 1px solid rgba(112, 112, 112, 0.2) !important;
     border-right: 1px solid rgba(112, 112, 112, 0.2) !important;
 }
+.mob-phones-view{
+    display: none;
+}
 .phones a, .phones button{
     background: transparent !important;
     outline: none !important;
@@ -495,20 +498,22 @@ template {
 .phoneNum{
 text-align: left;
 }
-
+.phoneNum img{
+    max-width: 17px;
+}
 .firstItm{
     padding-right: 0;
     padding-left: 10px;
 }
 .btnWrap {
     margin: 0 !important;
-    align-items: first baseline;
+    align-items: center;
     justify-content: space-between;
     min-width: 40%;
 }
 #basic-navbar-nav{
     justify-content: space-around;
-    align-items: first baseline;
+    align-items: center;
 }
 .headerPop{
     background: transparent !important;
@@ -595,13 +600,24 @@ text-align: left;
 }
 
 
+@media (max-width: 1322px){
+    .headerPop {
+        max-width: 117px !important;
+        font-size: 8px !important;
+        max-height: 37px;
+        line-height: 37px !important;
+    }
+    .navbar-nav a {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
 
-
-@media (min-width: 1080px){
+/* @media (min-width: 1080px){
     .navbar-nav {
         margin-left: 3%;
     }
-}
+} */
 @media (max-width: 1201px){
     .navbar-nav{
         flex-grow: 1;
@@ -627,6 +643,17 @@ text-align: left;
         font-size: 14px;
     }
 }
+
+
+@media (max-width: 1145px){
+    .desc-phones-wrap a{
+        padding: 0 5px;
+    }
+    .navbar-nav a{
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 991px){
     .btnWrap{
         display: none !important;
@@ -679,13 +706,105 @@ text-align: left;
     .active{
         font-weight: 700 !important;
     }
- 
-}
-@media (max-width: 556px){
-    .phonecall{
-        max-width: 30px;
+    .secShadow{
+        position: relative;
+        z-index: 2;
         display: block;
+    }
 
+
+    .secShadow:before,
+    .secShadow:after{
+        content: "";
+        display: block;
+       border-radius: 50%;
+        position: absolute;
+    }
+    .secShadow:before{
+        width: 36px;
+        height: 36px;
+        left: -3px;
+        top: 1px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        box-shadow: inset 1px 1px 13px -2px #5EB752;
+        opacity: 0.2;
+        z-index: 0;
+        animation: pulse-black 2s infinite;
+    }
+    .secShadow:after{
+        width: 34px;
+        height: 34px;
+        left: -2px;
+        top: -2px;
+        margin: 0 auto;
+        box-shadow: inset 1px 1px 13px -2px #5EB752;
+        opacity: 0.5;
+        z-index: 1;
+        animation: pulse-black 2s infinite;
+    }
+
+    @keyframes pulse-black {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(94, 183, 82, 0.7);
+        }
+        
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(94, 183, 82, 0);
+        }
+        
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(94, 183, 82, 0);
+        }
+    }
+    .mob-phones-view {
+        display: block;
+    }
+    .phones{
+        border: none !important;
+    }
+    .phonecall{
+        display: block;
+        max-width: 30px;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+}
+@media (max-width: 658px){
+    .dropdown-menu.show {
+        position: absolute;
+        border: none;
+        top: 56px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        min-height: 400px;
+        z-index: 1000;
+        display: block;
+        float: none;
+        min-width: 100%;
+    }
+    .mobphone .dropdown {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    .phoneNum {
+        text-align: center;
+        font: normal normal normal 22px/37px Montserrat;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+    .phoneInside {
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
     .clasePhwrap{
         border-radius: 50%;
@@ -697,10 +816,61 @@ text-align: left;
         max-width: 17px;
         transform: rotate(45deg);
     }
-    .phoneInside{
-        margin-left: auto;
+    .mobaddress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .mobaddress, .mailLink {
+        white-space: normal;
+        text-align: center !important;
+        font: normal normal normal 16px/19px Montserrat;
+        margin: 0 auto;
+    }
+    .descAddr {
+        margin: 0 auto;
+    }
+
+}
+@media (max-width: 556px){
+    .phonecall{
+        max-width: 30px;
+        display: block;
+
+    }
+    .mob-phones-view{
+        display: block;
+    }
+
+    .menu-btn-wrap,
+    .navbar-brand{
+        width: 40%;
+    }
+    .menu-btn-wrap{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobphone{
+        width: 20%;
+    }
+    .phoneInside {
+        margin: 0 auto;
         margin-bottom: 40px;
     }
+    .clasePhwrap{
+        border-radius: 50%;
+        background-color: #000;
+        width: 30px;
+        height: 30px;
+    }
+    .clasePhwrap img{
+        max-width: 17px;
+        transform: rotate(45deg);
+    }
+
     .secShadow{
         position: relative;
         z-index: 2;
@@ -776,6 +946,8 @@ text-align: left;
     }
     .mobphone .dropdown{
         position: static;
+        display: flex;
+        justify-content: center;
     }
 
     .dropdown-menu.show{

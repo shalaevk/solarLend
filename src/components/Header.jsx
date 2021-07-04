@@ -28,12 +28,6 @@ export const Header = (props) => {
 
     const [expanded, setExpanded] = useState(false);
 
-    const navbarRef = useRef(null);
-
-    const onButtonClick = () => {
-        console.log(5)
-
-    };
 
 
 
@@ -56,7 +50,8 @@ export const Header = (props) => {
         <div className="mobphone">
             <Dropdown>
                 <div className="dropWrap phones">
-                    <Dropdown.Toggle className="phones" id="dropdown-basic" >
+
+                    <Dropdown.Toggle className="phones mob-phones-view" id="dropdown-basic" >
 
                         <div className="secShadow" onClick={() => {
                             setPosition("")
@@ -66,7 +61,7 @@ export const Header = (props) => {
 
                     </Dropdown.Toggle>
 
-                    <Dropdown.Item className="firstItm deckwiev phoneNum" href={props.kiyvstar.url}> {props.kiyvstar.title}</Dropdown.Item>
+
                 </div>
 
 
@@ -80,7 +75,7 @@ export const Header = (props) => {
                         </div>
 
                     </Dropdown.Toggle>
-                    <Dropdown.Item className=" mobview phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" />  {props.kiyvstar.title}</Dropdown.Item>
+                    <Dropdown.Item className="  phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" />  {props.kiyvstar.title}</Dropdown.Item>
                     <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="vodaphone" loading="lazy" />  {props.vodafone.title}</Dropdown.Item>
                     <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" loading="lazy" /> {props.life.title}</Dropdown.Item>
 
@@ -94,19 +89,20 @@ export const Header = (props) => {
             </Dropdown>
         </div>
 
+        <div className="menu-btn-wrap">
+            <Navbar.Toggle onClick={() => {
+                setExpanded(expanded ? false : "expanded")
+                setClass()
+            }} aria-controls="basic-navbar-nav">
 
-        <Navbar.Toggle onClick={() => {
-            setExpanded(expanded ? false : "expanded")
-            setClass()
-        }} ref={navbarRef} aria-controls="basic-navbar-nav">
-
-            <div className={classNames("headertopnav", cls)}>
-                <div className="headertopnavbtn">
-                    Меню
+                <div className={classNames("headertopnav", cls)}>
+                    <div className="headertopnavbtn">
+                        Меню
+                    </div>
                 </div>
-            </div>
 
-        </Navbar.Toggle>
+            </Navbar.Toggle>
+        </div>
 
 
 
@@ -135,13 +131,19 @@ export const Header = (props) => {
 
             </Nav>
 
+
+
+
+
+
             <div className="btnWrap row">
                 <Dropdown className="desckPhone">
                     <div className="dropWrap phones">
-                        <Dropdown.Toggle className="phones" id="dropdown-basic">
-
-                        </Dropdown.Toggle>
-                        <Dropdown.Item className="firstItm phoneNum" href={props.kiyvstar.url}> {props.kiyvstar.title}</Dropdown.Item>
+                        <div className="desc-phones-wrap">
+                            <Dropdown.Item className="phoneNum" href={props.kiyvstar.url}><img src={kiyvstar} alt="kiyvstar" loading="lazy" /> {props.kiyvstar.title}</Dropdown.Item>
+                            <Dropdown.Item className="phoneNum" href={props.vodafone.url}><img src={vodaphone} alt="life" loading="lazy" />  {props.vodafone.title}</Dropdown.Item>
+                            <Dropdown.Item className="phoneNum" href={props.life.url}> <img src={life} alt="life" loading="lazy" /> {props.life.title}</Dropdown.Item>
+                        </div>
                     </div>
 
 
