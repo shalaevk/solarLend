@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet"
 
 import favicon from "../images/favicon-32x32.png"
-import logo from "../images/logo.svg"
+import logo from "../static/logo.png"
 
 const Head = (props) => {
     let lang = props.lang;
