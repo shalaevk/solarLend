@@ -5,9 +5,6 @@
 module.exports = {
   siteMetadata: {
     lang: "ru__Ru",
-
-    image: "./src/images/obj1.png"
-
   },
   plugins: [
     {
