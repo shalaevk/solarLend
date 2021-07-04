@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     lang: "ru__Ru",
 
-    image: "https://solarland.s-tet.top/wp-content/uploads/2021/07/logo.png"
+    image: "https://solarland.s-tet.top/wp-content/uploads/2021/07/logo.jpg"
 
   },
   plugins: [
