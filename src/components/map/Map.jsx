@@ -23,14 +23,7 @@ export const Map = (props) => {
             disableDefaultUI: true,
             mapTypeControl: false,
             streetViewControl: false,
-            zoomControlOptions: {
-                position: maps.ControlPosition.RIGHT_CENTER,
-                style: maps.ZoomControlStyle.SMALL
-            },
-            mapTypeControlOptions: {
-                position: maps.ControlPosition.TOP_RIGHT
-            },
-            mapTypeControl: true,
+
 
             styles: [
                 {
@@ -206,10 +199,10 @@ export const Map = (props) => {
     // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
 
 
-    const [center, setCenter] = useState({ lat: 50.4422373, lng: 30.6470394 });
+    const [center, setCenter] = useState({ lat: 50.4425945, lng: 30.6344022 });
 
-    const [marker, setMarker] = useState({ lat: 50.4412277, lng: 30.628249 });
-    const [zoom, setZoom] = useState(14);
+    const [marker, setMarker] = useState({ lat: 50.442367, lng: 30.632319 });
+    const [zoom, setZoom] = useState(17);
 
     useEffect(() => {
         if (window.innerWidth < 768) {
@@ -224,6 +217,7 @@ export const Map = (props) => {
         <div className={cl.mapWrap} style={{ height: '650px', width: '100%' }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyDF4UZiDOJ6Ptxa50DTydIqLT6iEsePnYc' }}
+
                 defaultCenter={center}
                 defaultZoom={zoom}
                 // yesIWantToUseGoogleMapApiInternals

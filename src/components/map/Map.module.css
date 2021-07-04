@@ -5,6 +5,7 @@
 
 .pin{
     width: 40px;
+    margin-top: -60px;
 }
 
 @media (max-width: 769px) {
