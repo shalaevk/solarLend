@@ -18,7 +18,10 @@ const Head = (props) => {
             <link rel="icon" href={favicon} />
             <meta name="description" content={lang === "uk" ? "Сонячні електростанції в Україні" : "Солнечные электростанции в Украине"} />
             <meta property="og:image" name="image" content="https://solarland.s-tet.top/wp-content/uploads/2021/07/logo.png" />
+            <meta property="og:image:width" name="image" content="512" />
+            <meta property="og:image:height" name="image" content="512" />
             <meta property="twitter:image" name="image" content="https://solarland.s-tet.top/wp-content/uploads/2021/07/logo.png" />
+
         </Helmet>
     )
 }
