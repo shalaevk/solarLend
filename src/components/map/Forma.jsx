@@ -101,8 +101,25 @@ const ContactForm = (props) => {
         },
     })
 
+    const [addrId, setAddrId] = useState("address")
+    const [mobaddrId, setmobAddrId] = useState("")
+
     useEffect(() => {
-        // set timeout 3 seconds to remove error/success message.
+        if (window.innerWidth < 768) {
+            setmobAddrId("address")
+            setAddrId("")
+        } if (window.innerWidth > 768) {
+            setmobAddrId("")
+            setAddrId("address")
+        }
+
+
+    }, []);
+
+
+
+    useEffect(() => {
+
         setTimeout(() => {
             // this will reset messageSent and isSuccessMessage state
             setMessageSent(false)
@@ -193,7 +210,7 @@ const ContactForm = (props) => {
                                 </div>
 
                             </form>
-                            <div id="address" ></div>
+                            <div id={addrId} ></div>
 
                         </div>
                     )}
@@ -204,6 +221,7 @@ const ContactForm = (props) => {
                 )}
 
                 <div className={cl.addressBottom}>
+                    <div className="mobAddr" id={mobaddrId}></div>
                     <p className={cl.addr}><img src={location} alt="" />
                         {props.lang === "uk" ? "м. Київ, вулиця Володимира Сосюри, 6, офіс 219" : "Киев, улица Владимира Сосюры, 6, офис 219"}
 

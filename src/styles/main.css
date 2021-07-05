@@ -500,6 +500,11 @@ text-align: left;
 }
 .phoneNum img{
     max-width: 17px;
+
+}
+.desc-phones-wrap .phoneNum{
+     padding-top: 0 !important;
+     padding-bottom: 0 !important;
 }
 .firstItm{
     padding-right: 0;
@@ -774,8 +779,13 @@ text-align: left;
     .dropdown-toggle::after{
         display: none;
     }
+    .mobAddr{
+        position: absolute;
+        top: -80px;
+    }
 
 }
+
 @media (max-width: 658px){
     .dropdown-menu.show {
         position: absolute;
@@ -832,8 +842,11 @@ text-align: left;
     .descAddr {
         margin: 0 auto;
     }
-
+   
+  
 }
+
+
 @media (max-width: 556px){
     .phonecall{
         max-width: 30px;
@@ -1383,7 +1396,10 @@ text-align: left;
     .mobsteps .react-multiple-carousel__arrow,
     .slidercontainer  .react-multiple-carousel__arrow{
         top: auto;
-        bottom: -56px;
+        /* bottom: -56px; */
+        top: auto;
+        background-color: #fff;
+        box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
     }
     .mobsteps .react-multi-carousel-item{
         display: flex;

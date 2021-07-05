@@ -17,6 +17,7 @@
 }
 .addressBottom{
     margin-top: 40px;
+    position: relative;
 }
 .addrTitle{
     text-align: left;
