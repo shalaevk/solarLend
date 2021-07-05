@@ -8,7 +8,7 @@
     margin: 0 auto;
     margin-top: 53px;
     padding-bottom: 30px;
-    border-bottom: 5px solid #9FD833;
+    /* border-bottom: 5px solid #9FD833; */
 }
 .priceItem{
     max-width: 33%;

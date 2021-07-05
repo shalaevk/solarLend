@@ -113,25 +113,25 @@ const Homepage = ({ data }) => {
             lang={data.wpPage.locale.locale}
         >
             <BodyClassName className={bodyClass}>
-            <div className='container-fluid'>
-                <Slider
-                    lang={data.wpPage.locale.locale}
-                    facebook={data.wpPage.acf.facebook}
-                    youtube={data.wpPage.acf.youtube}
-                    instagram={data.wpPage.acf.instagram}
-                    slides={data.wpPage.acf.addslide}
-                />
-                <Efficiency eff={data.wpPage.acf} lang={data.wpPage.locale.locale} />
-                <Choose ch={data.wpPage.acf} />
+                <div className='container-fluid'>
+                    <Slider
+                        lang={data.wpPage.locale.locale}
+                        facebook={data.wpPage.acf.facebook}
+                        youtube={data.wpPage.acf.youtube}
+                        instagram={data.wpPage.acf.instagram}
+                        slides={data.wpPage.acf.addslide}
+                    />
+                    <Efficiency eff={data.wpPage.acf} lang={data.wpPage.locale.locale} />
+                    <Choose ch={data.wpPage.acf} />
 
-                <Steps st={data.wpPage.acf} />
-                <Objects lang={data.wpPage.locale.locale} setBodyClassFunc={setBodyClassFunc} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
-                <Modal handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
-                <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
-                <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
-                <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
-                <Map lang={data.wpPage.locale.locale} />
-            </div>
+                    <Steps st={data.wpPage.acf} />
+                    <Objects lang={data.wpPage.locale.locale} setBodyClassFunc={setBodyClassFunc} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
+                    <Modal handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
+                    <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
+                    <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
+                    <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
+                    <Map lang={data.wpPage.locale.locale} />
+                </div>
             </BodyClassName>
         </PrimaryLayout>
 
