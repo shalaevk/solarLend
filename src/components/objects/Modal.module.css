@@ -118,6 +118,9 @@
         max-width: 100%;
         margin-bottom: 60px;
     }
+    .popCenter{
+        margin: 0 auto;
+    }
 }
 @media (max-width: 488px) {
 .rightItem h2{

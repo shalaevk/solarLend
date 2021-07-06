@@ -9,7 +9,7 @@ import 'react-image-lightbox/style.css'
 
 
 
-export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
+export const Modal = ({ lang, objData, handleClose, show, delBodyClassFunc }) => {
 
 
     const [isOpen, setOpen] = useState(false)
@@ -41,10 +41,10 @@ export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
     if (show && objData != {}) {
-        return (<div onTouchMove={(e)=>{
+        return (<div onTouchMove={(e) => {
             e.preventDefault()
         }} className={showHideClassName}>
-            <section  className='modal-main mod'>
+            <section className='modal-main mod'>
                 <div onClick={closeFunc} className={cl.closebtn}>
                     <img src={close} alt="close button" />
                 </div>
@@ -113,7 +113,7 @@ export const Modal = ({ objData, handleClose, show, delBodyClassFunc }) => {
                     <div className={cl.rightItem}>
                         <h2 dangerouslySetInnerHTML={{ __html: objData.title }} />
                         <p dangerouslySetInnerHTML={{ __html: objData.content }} />
-                        <a href='#conatctForm' onClick={handleClose} className={classNames('pop', cl.popCenter)}>Залишити заявку</a>
+                        <a href='#conatctForm' onClick={closeFunc} className={classNames('pop', cl.popCenter)}> {lang === "uk" ? "Залишити заявку" : "Оставить заявку"}</a>
                     </div>
                 </div>
                 <div className={cl.imgModalWrap}>{

@@ -126,7 +126,12 @@ export const Header = (props) => {
                     </div>
 
 
-                    <Social lang={props.lang} />
+                    <Social
+                        lang={props.lang}
+                        facebook={props.facebook}
+                        youtube={props.youtube}
+                        instagram={props.instagram}
+                    />
                 </div>
 
             </Nav>

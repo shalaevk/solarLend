@@ -161,7 +161,7 @@ const ContactForm = (props) => {
                                 <fieldset>
                                     <div className={classNames(cl.inputWrap, 'inputWrap')}>
 
-                                        <input onClick={setClassActive}
+                                        <input
                                             id="fullname"
                                             name="fullname"
                                             type="text"
@@ -199,7 +199,7 @@ const ContactForm = (props) => {
 
                                 </fieldset>
                                 <div>
-                                    <button className={classNames('pop', cl.formBtn)}
+                                    <button className={classNames('pop', cl.formBtn, `${isSubmitting ? 'disabled' : ''}`)}
                                         type="submit"
                                         value="Send Message"
                                         disabled={isSubmitting}
@@ -223,7 +223,7 @@ const ContactForm = (props) => {
                 <div className={cl.addressBottom}>
                     <div className="mobAddr" id={mobaddrId}></div>
                     <p className={cl.addr}><img src={location} alt="" />
-                        {props.lang === "uk" ? "м. Київ, вулиця Володимира Сосюри, 6, офіс 219" : "Киев, улица Владимира Сосюры, 6, офис 219"}
+                        {props.lang === "uk" ? "мiсто. Київ, вулиця Володимира Сосюри, 6, офіс 219" : "город. Киев, улица Владимира Сосюры, 6, офис 219"}
 
 
                     </p>

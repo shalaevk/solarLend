@@ -132,6 +132,8 @@
      }
 }
 
-@media (max-width: 685px){
-
+@media (max-width: 380px){
+    .text{
+        font: normal normal 900 34px/40px Montserrat;
+    }
 }

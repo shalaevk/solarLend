@@ -111,5 +111,7 @@
     .steptitle{
         max-width: 90% !important;
     }
-
+.stepnum{
+    text-align: center;
+}
 }

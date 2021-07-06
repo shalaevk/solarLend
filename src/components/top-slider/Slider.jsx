@@ -42,7 +42,7 @@ const Slider = (props) => {
                 </div>
 
                 <p className={cl.text}>{slide.subtitle}</p>
-                <a href='#conatctForm' className={classNames('pop', cl.mobBtn)}> {props.lang === "uk" ? "Отримати консультацію" : "Получить консультацию!"}</a>
+                <a href='#conatctForm' className={classNames('pop', cl.mobBtn)}> {props.lang === "uk" ? "Отримати консультацію" : "Получить консультацию"}</a>
             </Carousel.Caption>
         </Carousel.Item>
     })

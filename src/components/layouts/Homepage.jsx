@@ -126,7 +126,7 @@ const Homepage = ({ data }) => {
 
                     <Steps st={data.wpPage.acf} />
                     <Objects lang={data.wpPage.locale.locale} setBodyClassFunc={setBodyClassFunc} setModalData={setModalData} showModal={showModal} objects={data.allWpPost} />
-                    <Modal handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
+                    <Modal lang={data.wpPage.locale.locale} handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
                     <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                     <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
                     <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />

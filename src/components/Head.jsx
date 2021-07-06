@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet"
 
-import favicon from "../images/favicon-32x32.png"
+import favicon from "../images/fav.png"
 import logo from "../static/logo.png"
 
 const Head = (props) => {
@@ -14,7 +14,7 @@ const Head = (props) => {
 
         >
             <meta charSet="utf-8" />
-            <title> {lang === "uk" ? "Сонячні електростанції в Україні | Solarland!" : "Солнечные электростанции в Украине | Solarland!"} </title>
+            <title> {lang === "uk" ? "Сонячні електростанції в Україні | Solarland" : "Солнечные электростанции в Украине | Solarland"} </title>
             <link rel="icon" href={favicon} />
             <meta property="og:title" content={lang === "uk" ? "Сонячні електростанції в Україні" : "Солнечные электростанции в Украине"} />
             <meta property="og:description" name="description" content="Солнечные электростанции в Украине | SolarLend" />
