@@ -32,7 +32,7 @@ export const Price = ({ pr, lang }) => {
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextone}</p>
                         </div>
                         <div className={classNames(cl.priceItem, "animate__animated animate__fadeInLeft")}>
@@ -45,7 +45,7 @@ export const Price = ({ pr, lang }) => {
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetexttwo}</p>
                         </div>
                         <div className={classNames(cl.priceItem, "animate__animated animate__fadeInLeft")}>
@@ -58,7 +58,7 @@ export const Price = ({ pr, lang }) => {
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextthree}</p>
                         </div>
                         <div className={classNames(cl.priceItem, "animate__animated animate__fadeInLeft")}>
@@ -71,7 +71,7 @@ export const Price = ({ pr, lang }) => {
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>
                                 {lang === "uk" ? "Замовити" : "Заказать"}
                             </a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextfour}</p>
                         </div>
                     </ReactWOW>
@@ -133,7 +133,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitleone}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextone}</p>
                         </div>
                         <div className={cl.priceItem}>
@@ -142,7 +142,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitletwo}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetexttwo}</p>
                         </div>
                         <div className={cl.priceItem}>
@@ -151,7 +151,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitlethree}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextthree}</p>
                         </div>
                         <div className={cl.priceItem}>
@@ -160,7 +160,7 @@ export const Price = ({ pr, lang }) => {
                             <p className={cl.za}>за кВт</p>
                             <p className={cl.priceTitle}>{pr.priceblock.pricetitlefour}</p>
                             <a href='#conatctForm' className={classNames(cl.priceBtn, 'pop')}>{lang === "uk" ? "Замовити" : "Заказать"}</a>
-                            <div className={cl.decor}></div>
+                            {/* <div className={cl.decor}></div> */}
                             <p className={cl.text}>{pr.priceblock.pricetextfour}</p>
                         </div>
 

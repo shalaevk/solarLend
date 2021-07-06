@@ -500,7 +500,9 @@ text-align: left;
 }
 .phoneNum img{
     max-width: 17px;
-
+}
+.phoneNum:hover{
+    color: #5eb752!important;
 }
 .desc-phones-wrap .phoneNum{
      padding-top: 0 !important;

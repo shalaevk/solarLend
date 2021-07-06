@@ -102,6 +102,10 @@
 .thanktext{
     color: #9FD833;
 }
+.phonesMobWrap .phone a:hover{
+    color: #5eb752!important;
+    text-decoration: none !important;
+}
 @media (max-width: 769px) {
     .addressWrap {
         position: absolute;
