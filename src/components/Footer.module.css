@@ -43,8 +43,12 @@
 .social a{
    margin: 0 7.5px;
 }
+.social a:nth-child(2) img{
+   max-width: 19px;
+}
 .social a:hover{
    opacity: 0.5;
+   text-decoration: none;
 }
 .footerCopy{
    display: flex;

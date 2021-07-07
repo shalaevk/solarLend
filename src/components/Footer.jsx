@@ -52,7 +52,7 @@ export const Footer = (props) => {
          </div>
          <div className={cl.copyRight}>
             <p>© 2021 Solarland. {props.lang === "uk" ? "Усі права захищенні" : "Все права защищены:"} </p>
-            <p>{props.lang === "uk" ? <span className="prPolicy" onClick={props.showModal}> {props.lang === "uk" ? "Політика конфіденційності" : "Политика конфиденциальности"}</span> : <span onClick={props.showModal}> Политика конфиденциальности</span>}</p>
+            <p>{props.lang === "uk" ? <span className="prPolicy" onClick={props.showModal}> Політика конфіденційності </span> : <span className="prPolicy" onClick={props.showModal}> Политика конфиденциальности</span>}</p>
          </div>
       </div>
    </footer>
