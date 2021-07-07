@@ -168,8 +168,8 @@ export const Header = (props) => {
                 </Dropdown>
                 <div className="lang descLang">
 
-                    <Link activeClassName="active" to="/"> RU </Link>
-                    <Link activeClassName="active" to="/uk"> UA </Link>
+                    <Link className={props.lang === "uk" ? "" : "active"} activeClassName="active" to="/"> RU </Link>
+                    <Link className={props.lang === "uk" ? "active" : ""} activeClassName="active" to="/uk"> UA </Link>
 
                 </div>
                 <a href='#conatctForm' className={'pop headerPop'}>
