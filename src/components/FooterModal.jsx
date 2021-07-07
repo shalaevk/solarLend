@@ -7,7 +7,7 @@ import 'react-image-lightbox/style.css'
 
 
 
-export const FooterModal = ({ text, handleClose, show }) => {
+export const FooterModal = ({ lang, text, handleClose, show }) => {
 
    const [isOpen, setOpen] = useState(false)
    const [photoIndex, setIndex] = useState(0)
@@ -23,7 +23,7 @@ export const FooterModal = ({ text, handleClose, show }) => {
                <img src={close} alt="close button" />
             </div>
 
-            <h3 className="privTitle">Політика конфіденційності</h3>
+            <h3 className="privTitle"> {lang === "uk" ? "Політика конфіденційності" : "Политика конфиденциальности"}</h3>
 
             <div className="text" dangerouslySetInnerHTML={{ __html: text }}></div>
 

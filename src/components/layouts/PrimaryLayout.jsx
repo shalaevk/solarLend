@@ -50,7 +50,7 @@ const PrimaryLayout = (props) => {
             headerMenu={headerMenu}
             showModal={showModal}
         />
-        <FooterModal handleClose={hideModal} text={props.text} show={show} />
+        <FooterModal handleClose={hideModal} lang={props.lang} text={props.text} show={show} />
     </>
 }
 
