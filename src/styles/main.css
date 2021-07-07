@@ -672,7 +672,7 @@ text-align: left;
         text-align: center;
         margin-top: 32px;
         padding-bottom: 40px;
-        max-height: 530px;
+        max-height: 90vh;
         overflow-y: auto;
     }
     .navbar-brand {

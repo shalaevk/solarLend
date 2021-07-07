@@ -223,7 +223,7 @@ const ContactForm = (props) => {
                 <div className={cl.addressBottom}>
                     <div className="mobAddr" id={mobaddrId}></div>
                     <p className={cl.addr}><img src={location} alt="" />
-                        {props.lang === "uk" ? "мiсто. Київ, вулиця Володимира Сосюри, 6, офіс 219" : "город. Киев, улица Владимира Сосюры, 6, офис 219"}
+                        {props.lang === "uk" ? "мiсто Київ, вулиця Володимира Сосюри, 6, офіс 219" : "город Киев, улица Владимира Сосюры, 6, офис 219"}
 
 
                     </p>

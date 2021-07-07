@@ -124,12 +124,12 @@
         margin: 0 auto;
     }
     .addressBottom{
-        margin-top: 500px;
+        margin-top: 460px;
     }
 }
 @media (max-width: 447px) {
     .addressWrap{
-        width: 90%;
+        width: 95%;
     }
     .addrTitle{
         font: normal normal bold 42px/52px Futura PT;
