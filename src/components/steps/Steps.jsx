@@ -48,7 +48,7 @@ export const Steps = ({ st }) => {
                         <div className={cl.icon}>
                             <img className="img-fluid" src={step2} alt="Steps" loading="lazy" />
                         </div>
-                        <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
+                        <div className={classNames(cl.list, cl.black)} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
 
 
                     </div>
@@ -138,7 +138,7 @@ export const Steps = ({ st }) => {
                             <div className={cl.icon}>
                                 <img className="img-fluid" src={step2} alt="Decor" />
                             </div>
-                            <div className={cl.list} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
+                            <div className={classNames(cl.list, cl.black)} dangerouslySetInnerHTML={{ __html: st.stepblock.steptexttwo }} />
 
 
                         </div>
