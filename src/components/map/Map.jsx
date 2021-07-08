@@ -8,7 +8,7 @@ import ContactForm from "./Forma";
 
 
 
-const Map = (props) => {
+export const Map = (props) => {
 
     return (
         <div className={cl.mapWrap} style={{ height: '650px', width: '100%' }} >
@@ -22,5 +22,3 @@ const Map = (props) => {
         </div>
     )
 }
-
-export default Map;
