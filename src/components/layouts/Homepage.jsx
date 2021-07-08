@@ -1,4 +1,4 @@
-import React, { useState, lazy } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { graphql } from "gatsby"
 import PrimaryLayout from "./PrimaryLayout";
 import Slider from "../top-slider/Slider";
@@ -9,7 +9,7 @@ import { Steps } from "../steps/Steps";
 import { Objects } from "../objects/Objects";
 import { Price } from "../price/Price";
 import { Reviews } from "../reviews/Reviews";
-import { Map } from "../map/Map";
+// import { Map } from "../map/Map";
 import { Modal } from "../objects/Modal";
 import { ReviewModal } from "../reviews/ReviewModal";
 import BodyClassName from 'react-body-classname';
@@ -17,7 +17,7 @@ import BodyClassName from 'react-body-classname';
 
 
 
-
+const Map = lazy(() => import("../map/Map"));
 
 
 
@@ -129,8 +129,11 @@ const Homepage = ({ data }) => {
                     <Modal lang={data.wpPage.locale.locale} handleClose={hideModal} delBodyClassFunc={delBodyClassFunc} objData={objData} show={show} />
                     <Price pr={data.wpPage.acf} lang={data.wpPage.locale.locale} />
                     <Reviews setLink={setLink} showModal={showModalRew} rev={data.wpPage.acf} />
+
                     <ReviewModal handleClose={hideModalRew} rewLink={rewLink} show={isOpenRew} />
-                    <Map lang={data.wpPage.locale.locale} />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Map lang={data.wpPage.locale.locale} />
+                    </Suspense>
                 </div>
             </BodyClassName>
         </PrimaryLayout>
